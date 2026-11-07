@@ -40,6 +40,7 @@ h6{
     z-index: 99;
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 0 0 35px 35px;
 }
 .header h1 {
     padding: 1.5rem;
@@ -90,6 +91,7 @@ section{
     margin: 3rem;
     padding: 3rem;
     gap: 2rem;
+    border-radius: 25%;
     justify-content: space-between;
     background-color: var(--back-card);
     /* border: 1px solid black; */
