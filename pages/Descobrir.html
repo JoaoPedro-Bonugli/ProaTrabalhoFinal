@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descobrir | LPF</title>
+    <link rel="stylesheet" href="../css/paginas-julio.css" />
+  </head>
+  <body class="pagina-lpf pagina-descobrir">
+    <!--header-->
+    <header class="cabecalho">
+      <div class="cabecalho-conteudo">
+        <a href="../index.html" class="logo">
+          <img
+            src="../assets/1_HOME_1/Logo.png"
+            alt="Logo dos Livros para o Futuro"
+          />
+          <span>L.P.F</span>
+        </a>
+        <nav class="menu" aria-label="Navegação principal">
+          <a href="../index.html">Início</a>
+          <a href="MinhaEstante.html">Minha Estante</a>
+          <a href="Descobrir.html" aria-current="page">Descobrir</a>
+          <a href="Comunidade.html">Comunidade</a>
+        </nav>
+
+        <a href="Entrar.html" class="perfil">Meu perfil</a>
+      </div>
+    </header>
+
+    <!--Conteúdo principal-->
+    <main class="conteudo-principal">
+      <!--apresentação-->
+      <section class="introducao">
+        <h1>Descubra a sua próxima leitura</h1>
+        <p>
+          Explore nosso catálogo e encontre livros para adicionar à sua estante.
+        </p>
+      </section>
+
+      <!--pesquisa e filtros-->
+      <section class="area-filtros" aria-label="Buscar livros">
+        <div class="campo-busca">
+          <label for="buscarLivro">Buscar livro</label>
+          <input
+            type="search"
+            id="buscarLivro"
+            placeholder="Pesquisa por título ou autor..."
+          />
+        </div>
+
+        <div class="campo-genero">
+          <label for="filtrarGenero">Gênero</label>
+          <select id="filtrarGenero">
+            <option value="todos">Todos os gêneros</option>
+            <option value="romance">Romance</option>
+            <option value="fantasia">Fantasia</option>
+            <option value="ficcao">Ficção</option>
+            <option value="classico">Clássicos</option>
+          </select>
+        </div>
+      </section>
+
+      <!--catálogo de livros-->
+      <section class="catalogo" aria-labelledby="tituloCatalogo">
+        <h2 id="tituloCatalogo">Explore os livros</h2>
+
+        <div class="grade-livros" id="gradeLivros">
+          <!--os cards serão add aqui-->
+        </div>
+
+        <div class="area-ver-mais">
+          <button type="button" id="verMaisLivros">Ver mais</button>
+        </div>
+      </section>
+    </main>
+
+    <!--footer-->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img src="../assets/1_HOME_1/Logo.png" alt="" />
+          <strong>LPF - Livros para o Futuro</strong>
+        </div>
+
+        <p>Descubra. Organize. Leia.</p>
+      </div>
+    </footer>
+  </body>
+</html>
