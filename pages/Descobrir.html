@@ -17,19 +17,113 @@
           />
           <span>L.P.F</span>
         </a>
-        <nav class="menu" aria-label="Navegação principal">
-          <a href="../index.html">Início</a>
-          <a href="MinhaEstante.html">Minha Estante</a>
-          <a href="Descobrir.html" aria-current="page">Descobrir</a>
-          <a href="Comunidade.html">Comunidade</a>
-        </nav>
+<!--botão MENU HAMBURGUER-->
+<button
+    type="button"
+    class="menu-toggle"
+    id="botaoMenu"
+    aria-label="Abrir menu de navegação"
+    aria-controls="menuPrincipal"
+    aria-expanded="false"
+>
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
 
-        <a href="Entrar.html" class="perfil">Meu perfil</a>
+<!--nav principal-->
+<nav
+    class="menu"
+    id="menuPrincipal"
+    aria-label="Navegação principal"
+>
+    <a href="../index.html">Início</a>
+
+    <a href="MinhaEstante.html">
+        Minha Estante
+    </a>
+
+    <a href="Descobrir.html" aria-current="page">
+        Descobrir
+    </a>
+
+    <a href="Comunidade.html">
+        Comunidade
+    </a>
+
+    <a href="planosdefidelidade.html">
+        Planos
+    </a>
+</nav>
+
+        <a href="Entrar.html" class="perfil">Entrar</a>
       </div>
     </header>
 
     <!--Conteúdo principal-->
     <main class="conteudo-principal">
+      <!--pesquisa e filtros-->
+      <section class="area-filtros" aria-label="Pesquisar e filtrar livros">
+        <form class="form-busca" id="formBuscaLivro" role="search">
+          <input
+            type="search"
+            id="buscarLivro"
+            name="q"
+            class="input-busca"
+            placeholder="Pesquisar"
+            aria-label="Pesquisar livro"
+          />
+
+          <!-- BOTÃO DE FILTRO -->
+          <details class="filtro-genero">
+            <summary aria-label="Filtrar por gênero" title="Filtrar por gênero">
+              <svg
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M3 4.5h18l-7 8.1V20l-4 1v-8.4L3 4.5Z" />
+              </svg>
+            </summary>
+
+            <div class="filtro-opcoes">
+              <label for="filtrarGenero">Gênero</label>
+              <select id="filtrarGenero">
+                <option value="todos">Todos os gêneros</option>
+                <option value="romance">Romance</option>
+                <option value="fantasia">Fantasia</option>
+                <option value="ficcao">Ficção</option>
+                <option value="classico">Clássicos</option>
+              </select>
+            </div>
+          </details>
+
+          <!-- BOTÃO DE PESQUISA -->
+          <button
+            type="submit"
+            class="botao-busca"
+            aria-label="Pesquisar livros"
+            title="Pesquisar livros"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <circle cx="10.8" cy="10.8" r="6.5" />
+              <path d="m16 16 5 5" />
+            </svg>
+          </button>
+        </form>
+      </section>
+
       <!--apresentação-->
       <section class="introducao">
         <h1>Descubra a sua próxima leitura</h1>
@@ -38,39 +132,245 @@
         </p>
       </section>
 
-      <!--pesquisa e filtros-->
-      <section class="area-filtros" aria-label="Buscar livros">
-        <div class="campo-busca">
-          <label for="buscarLivro">Buscar livro</label>
-          <input
-            type="search"
-            id="buscarLivro"
-            placeholder="Pesquisa por título ou autor..."
-          />
-        </div>
-
-        <div class="campo-genero">
-          <label for="filtrarGenero">Gênero</label>
-          <select id="filtrarGenero">
-            <option value="todos">Todos os gêneros</option>
-            <option value="romance">Romance</option>
-            <option value="fantasia">Fantasia</option>
-            <option value="ficcao">Ficção</option>
-            <option value="classico">Clássicos</option>
-          </select>
-        </div>
-      </section>
-
       <!--catálogo de livros-->
       <section class="catalogo" aria-labelledby="tituloCatalogo">
         <h2 id="tituloCatalogo">Explore os livros</h2>
 
         <div class="grade-livros" id="gradeLivros">
-          <!--os cards serão add aqui-->
+          <!-- LIVRO 1 -->
+          <article
+            class="livro-card"
+            data-id="dom-casmurro"
+            data-generos="romance,classico"
+          >
+            <img
+              class="livro-capa"
+              src="../assets/1_HOME_1/descobrir/dom-casmurro.png.jpg"
+              alt="Capa de Dom Casmurro"
+              loading="lazy"
+            />
+
+            <div class="livro-dados">
+              <h3 class="livro-titulo">Dom Casmurro</h3>
+              <p class="livro-autor">Machado de Assis</p>
+            </div>
+
+            <a
+              class="livro-botao"
+              href="ApresentacaoLivro.html?livro=dom-casmurro"
+            >
+              Ver livro
+            </a>
+
+            <p class="livro-genero">Romance realista</p>
+          </article>
+
+          <!-- LIVRO 2 -->
+          <article
+            class="livro-card"
+            data-id="pequeno-principe"
+            data-generos="fantasia,classico"
+          >
+            <img
+              class="livro-capa"
+              src="../assets/1_HOME_1/descobrir/pequeno-principe.png"
+              alt="Capa de O Pequeno Príncipe"
+              loading="lazy"
+            />
+
+            <div class="livro-dados">
+              <h3 class="livro-titulo">O Pequeno Príncipe</h3>
+              <p class="livro-autor">Antoine de Saint-Exupéry</p>
+            </div>
+
+            <a
+              class="livro-botao"
+              href="ApresentacaoLivro.html?livro=pequeno-principe"
+            >
+              Ver livro
+            </a>
+
+            <p class="livro-genero">Literatura infantojuvenil</p>
+          </article>
+
+          <!-- LIVRO 3 -->
+          <article
+            class="livro-card"
+            data-id="orgulho-preconceito"
+            data-generos="romance,classico"
+          >
+            <img
+              class="livro-capa"
+              src="../assets/1_HOME_1/descobrir/orgulho-preconceito.png"
+              alt="Capa de Orgulho e Preconceito"
+              loading="lazy"
+            />
+
+            <div class="livro-dados">
+              <h3 class="livro-titulo">Orgulho e Preconceito</h3>
+              <p class="livro-autor">Jane Austen</p>
+            </div>
+
+            <a
+              class="livro-botao"
+              href="ApresentacaoLivro.html?livro=orgulho-preconceito"
+            >
+              Ver livro
+            </a>
+
+            <p class="livro-genero">Romance de costumes</p>
+          </article>
+
+          <!-- LIVRO 4 -->
+          <article
+            class="livro-card"
+            data-id="metamorfose"
+            data-generos="ficcao,classico"
+          >
+            <img
+              class="livro-capa"
+              src="../assets/1_HOME_1/descobrir/metamorfose.png"
+              alt="Capa de A Metamorfose"
+              loading="lazy"
+            />
+
+            <div class="livro-dados">
+              <h3 class="livro-titulo">A Metamorfose</h3>
+              <p class="livro-autor">Franz Kafka</p>
+            </div>
+
+            <a
+              class="livro-botao"
+              href="ApresentacaoLivro.html?livro=metamorfose"
+            >
+              Ver livro
+            </a>
+
+            <p class="livro-genero">Ficção</p>
+          </article>
+
+          <!-- LIVRO 5 -->
+          <article
+            class="livro-card"
+            data-id="o-cortico"
+            data-generos="romance,classico"
+          >
+            <img
+              class="livro-capa"
+              src="../assets/1_HOME_1/descobrir/o-cortico.png"
+              alt="Capa de O Cortiço"
+              loading="lazy"
+            />
+
+            <div class="livro-dados">
+              <h3 class="livro-titulo">O Cortiço</h3>
+              <p class="livro-autor">Aluísio Azevedo</p>
+            </div>
+
+            <a
+              class="livro-botao"
+              href="ApresentacaoLivro.html?livro=o-cortico"
+            >
+              Ver livro
+            </a>
+
+            <p class="livro-genero">Romance naturalista</p>
+          </article>
+
+          <!-- LIVRO 6 -->
+          <article
+            class="livro-card"
+            data-id="alice"
+            data-generos="fantasia,classico"
+          >
+            <img
+              class="livro-capa"
+              src="../assets/1_HOME_1/descobrir/alice.png"
+              alt="Capa de Alice no País das Maravilhas"
+              loading="lazy"
+            />
+
+            <div class="livro-dados">
+              <h3 class="livro-titulo">Alice no País das Maravilhas</h3>
+              <p class="livro-autor">Lewis Carroll</p>
+            </div>
+
+            <a class="livro-botao" href="ApresentacaoLivro.html?livro=alice">
+              Ver livro
+            </a>
+
+            <p class="livro-genero">Fantasia</p>
+          </article>
+
+          <!-- LIVRO 7 -->
+          <article
+            class="livro-card"
+            data-id="hora-da-estrela"
+            data-generos="romance,classico"
+          >
+            <img
+              class="livro-capa"
+              src="../assets/1_HOME_1/descobrir/hora-da-estrela.png"
+              alt="Capa de A Hora da Estrela"
+              loading="lazy"
+            />
+
+            <div class="livro-dados">
+              <h3 class="livro-titulo">A Hora da Estrela</h3>
+              <p class="livro-autor">Clarice Lispector</p>
+            </div>
+
+            <a
+              class="livro-botao"
+              href="ApresentacaoLivro.html?livro=hora-da-estrela"
+            >
+              Ver livro
+            </a>
+
+            <p class="livro-genero">Romance brasileiro</p>
+          </article>
+
+          <!-- LIVRO 8 -->
+          <article
+            class="livro-card"
+            data-id="memorias-postumas"
+            data-generos="romance,classico"
+          >
+            <img
+              class="livro-capa"
+              src="../assets/1_HOME_1/descobrir/memorias-postumas.png"
+              alt="Capa de Memórias Póstumas de Brás Cubas"
+              loading="lazy"
+            />
+
+            <div class="livro-dados">
+              <h3 class="livro-titulo">Memórias Póstumas de Brás Cubas</h3>
+              <p class="livro-autor">Machado de Assis</p>
+            </div>
+
+            <a
+              class="livro-botao"
+              href="ApresentacaoLivro.html?livro=memorias-postumas"
+            >
+              Ver livro
+            </a>
+
+            <p class="livro-genero">Romance realista</p>
+          </article>
         </div>
 
+        <p
+          id="mensagemBusca"
+          class="mensagem-busca"
+          role="status"
+          aria-live="polite"
+          hidden
+        >
+          Nenhum livro encontrado.
+        </p>
+
         <div class="area-ver-mais">
-          <button type="button" id="verMaisLivros">Ver mais</button>
+          <button type="button" id="verMaisLivros">Ver mais livros</button>
         </div>
       </section>
     </main>
@@ -78,13 +378,56 @@
     <!--footer-->
     <footer class="footer">
       <div class="footer-container">
-        <div class="footer-brand">
-          <img src="../assets/1_HOME_1/Logo.png" alt="" />
-          <strong>LPF - Livros para o Futuro</strong>
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="../assets/1_HOME_1/Logo.png" alt="" />
+
+            <strong>LPF - Livros para o Futuro</strong>
+          </div>
+
+          <div class="footer-social">
+            <img
+              src="../assets/1_HOME_1/redes.png"
+              alt="Facebook, YouTube e Instagram"
+            />
+          </div>
         </div>
 
-        <p>Descubra. Organize. Leia.</p>
+        <div class="footer-info">
+          <div class="footer-column">
+            <h3>Contatos:</h3>
+            <p>WhatsApp: número de contato</p>
+            <p>E-mail: contato do projeto</p>
+            <p>SAC: número de atendimento</p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Central de ajuda para associados:</h3>
+            <p>Termos de serviço e política de privacidade</p>
+            <p>Políticas de cookies</p>
+            <p>Informações institucionais do LPF</p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Suporte:</h3>
+            <p>SAC: número de atendimento</p>
+            <p>WhatsApp: número de contato</p>
+            <p>E-mail: contato do projeto</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 LPF - Livros para o Futuro</p>
+        </div>
       </div>
     </footer>
+
+    <!--acessibilidade-->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <!--javascript-->
+    <script src="../js/descobrir.js" defer></script>
+    <script src="../js/menu-lpf.js" defer></script>
+    <script src="../assets/1_HOME_1/"></script>
   </body>
 </html>

@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apresentação do Livro | LPF</title>
+    <link rel="stylesheet" href="../css/paginas-julio.css" />
+  </head>
+  <body class="pagina-lpf pagina-descobrir pagina-apresentacao">
+    <!--header-->
+    <header class="cabecalho">
+      <div class="cabecalho-conteudo">
+        <a href="../index.html" class="logo">
+          <img
+            src="../assets/1_HOME_1/Logo.png"
+            alt="Logo dos Livros para o Futuro"
+          />
+          <span>L.P.F</span>
+        </a>
+        <!--botão MENU HAMBURGUER-->
+        <button
+          type="button"
+          class="menu-toggle"
+          id="botaoMenu"
+          aria-label="Abrir menu de navegação"
+          aria-controls="menuPrincipal"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!--nav principal-->
+        <nav class="menu" id="menuPrincipal" aria-label="Navegação principal">
+          <a href="../index.html">Início</a>
+
+          <a href="MinhaEstante.html"> Minha Estante </a>
+
+          <a href="Descobrir.html" aria-current="page"> Descobrir </a>
+
+          <a href="Comunidade.html"> Comunidade </a>
+
+          <a href="planosdefidelidade.html"> Planos </a>
+        </nav>
+
+        <a href="Entrar.html" class="perfil">Entrar</a>
+      </div>
+    </header>
+
+    <!--conteudo principal-->
+    <main class="conteudo-principal apresentacao-main">
+      <!--navegação-->
+      <a href="Descobrir.html" class="apresentacao-voltar">
+        <span aria-hidden="true">←</span>
+        Voltar para Descobrir
+      </a>
+
+      <!--introdução-->
+      <section class="apresentacao-introducao">
+        <p class="apresentacao-caminho">DESCOBRIR / APRESENTAÇÃO DO LIVRO</p>
+
+        <h1>Conheça sua próxima leitura</h1>
+
+        <p>Uma história marcante para conhecer antes de levar à sua estante.</p>
+      </section>
+
+      <!--info do livro-->
+      <section class="apresentacao-card">
+        <!--coluna da capa-->
+        <div class="apresentacao-imagem">
+          <img
+            id="apresentacaoCapa"
+            src="../assets/1_HOME_1/descobrir/DomCasmurroMachadodeAssis.jpg"
+            alt="Capa do livro Dom Casmurro"
+          />
+        </div>
+
+        <!--coluna das info-->
+        <div class="apresentacao-dados">
+          <span class="apresentacao-etiqueta"> LITERATURA BRASILEIRA </span>
+
+          <h2 id="apresentacaoTitulo">Dom Casmurro</h2>
+
+          <p class="apresentacao-autor" id="apresentacaoAutor">
+            Machado de Assis
+          </p>
+
+          <!--details-->
+          <div class="apresentacao-detalhes">
+            <div class="detalhe-item">
+              <span>GÊNERO</span>
+              <strong id="apresentacaoGenero"> Romance </strong>
+              <small>Realismo brasileiro</small>
+            </div>
+
+            <div class="detalhe-item">
+              <span>PUBLICAÇÃO</span>
+              <strong id="apresentacaoAno"> 1899 </strong>
+            </div>
+
+            <div class="detalhe-item">
+              <span>IDIOMA</span>
+              <strong id="apresentacaoIdioma"> Português </strong>
+            </div>
+          </div>
+
+          <!--descrição-->
+          <p class="apresentacao-descricao">
+            Entre as lembranças de Bentinho e sua relação com Capitu, um
+            clássico que convida o leitor a questionar a memória, o ciúme e as
+            diferentes versões de uma mesma história.
+          </p>
+
+          <!--adicionar a estante-->
+          <button
+            type="button"
+            class="apresentacao-botao"
+            id="adicionarEstante"
+          >
+            <span aria-hidden="true">+</span>
+            Adicionar à Minha Estante
+          </button>
+
+          <p class="apresentacao-aviso">
+            Depois de adicionar, você poderá iniciar a leitura.
+          </p>
+        </div>
+      </section>
+
+      <!--sinopse e infos add-->
+      <section class="apresentacao-inferior">
+        <article class="apresentacao-sinopse">
+          <h2>Sinopse</h2>
+
+          <p id="sinopseLivro">
+            Bento Santiago recorda a juventude e o amor por Capitu, amiga de
+            infância com quem constrói uma vida marcada por afetos, expectativas
+            e suspeitas. Narrada a partir de suas memórias, a história desafia
+            certezas e deixa ao leitor a tarefa de interpretar o que realmente
+            ocorreu.
+          </p>
+        </article>
+
+        <aside class="apresentacao-orientacao">
+          <h2>Antes de começar</h2>
+
+          <p>
+            Gostou do livro? Adicione à sua estante para acompanhar o progresso
+            e registrar sua avaliação. Tudo fica reunido em um só lugar.
+          </p>
+        </aside>
+      </section>
+
+      <!--final-->
+      <div class="apresentacao-frase">
+        <strong>
+          Uma história para descobrir. Um lugar para acompanhar.
+        </strong>
+
+        <span>Descubra. Organize. Leia.</span>
+      </div>
+    </main>
+
+    <!--footer-->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="../assets/1_HOME_1/Logo.png" alt="" />
+
+            <strong>LPF - Livros para o Futuro</strong>
+          </div>
+
+          <div class="footer-social">
+            <img
+              src="../assets/1_HOME_1/redes.png"
+              alt="Facebook, YouTube e Instagram"
+            />
+          </div>
+        </div>
+
+        <div class="footer-info">
+          <div class="footer-column">
+            <h3>Contatos:</h3>
+            <p>WhatsApp: número de contato</p>
+            <p>E-mail: contato do projeto</p>
+            <p>SAC: número de atendimento</p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Central de ajuda para associados:</h3>
+            <p>Termos de serviço e política de privacidade</p>
+            <p>Políticas de cookies</p>
+            <p>Informações institucionais do LPF</p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Suporte:</h3>
+            <p>SAC: número de atendimento</p>
+            <p>WhatsApp: número de contato</p>
+            <p>E-mail: contato do projeto</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 LPF - Livros para o Futuro</p>
+        </div>
+      </div>
+    </footer>
+
+    <!--acessibilidade-->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <!--javascript-->
+    <script src="../js/menu-lpf.js" defer></script>
+    <script src="../js/livros.js" defer></script>
+    <script src="../js/apresentacao-livro.js" defer></script>
+  </body>
+</html>
