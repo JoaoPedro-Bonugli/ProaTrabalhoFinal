@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adicionar Livro | LPF</title>
+    <link rel="stylesheet" href="../css/paginas-julio.css" />
+  </head>
+  <body class="pagina-lpf pagina-descobrir pagina-adicionar">
+    <!--header-->
+    <header class="cabecalho">
+      <div class="cabecalho-conteudo">
+        <a href="../index.html" class="logo">
+          <img
+            src="../assets/1_HOME_1/Logo.png"
+            alt="Logo dos Livros para o Futuro"
+          />
+          <span>L.P.F</span>
+        </a>
+        <!--botão MENU HAMBURGUER-->
+        <button
+          type="button"
+          class="menu-toggle"
+          id="botaoMenu"
+          aria-label="Abrir menu de navegação"
+          aria-controls="menuPrincipal"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!--nav principal-->
+        <nav class="menu" id="menuPrincipal" aria-label="Navegação principal">
+          <a href="../index.html">Início</a>
+
+          <a href="MinhaEstante.html" aria-current="page"> Minha Estante </a>
+
+          <a href="Descobrir.html"> Descobrir </a>
+
+          <a href="Comunidade.html"> Comunidade </a>
+
+          <a href="planosdefidelidade.html"> Planos </a>
+        </nav>
+
+        <a href="Entrar.html" class="perfil">Entrar</a>
+      </div>
+    </header>
+
+    <!--conteudo principal-->
+    <main class="conteudo-principal adicionar-main">
+      <!--voltar para minha estante-->
+      <a href="MinhaEstante.html" class="adicionar-voltar">
+        <span aria-hidden="true">←</span>
+        Voltar à Minha Estante
+      </a>
+
+      <!--introdução-->
+      <section class="adicionar-introducao">
+        <h1>Adicionar Livro</h1>
+
+        <p>
+          Organize suas leituras, acompanhe seu progresso e registre suas
+          experiências literárias.
+        </p>
+      </section>
+
+      <!--form do cadastro-->
+      <form id="formAdicionarLivro" class="adicionar-formulario">
+        <!--coluna da capa-->
+        <div class="adicionar-coluna-capa">
+          <h2>Capa do livro</h2>
+
+          <div class="adicionar-capa-preview">
+            <div id="capaPlaceholder" class="adicionar-capa-placeholder">
+              <span aria-hidden="true">▤</span>
+              <p>Prévia da capa</p>
+            </div>
+
+            <img
+              id="previewCapa"
+              src=""
+              alt="Prévia da capa selecionada"
+              hidden
+            />
+          </div>
+
+          <label for="capaLivro" class="adicionar-upload">
+            Escolher imagem
+          </label>
+
+          <input
+            type="file"
+            id="capaLivro"
+            accept="image/png,image/jpeg,image/webp"
+            class="adicionar-input-arquivo"
+          />
+
+          <p class="adicionar-capa-aviso">
+            A capa é opcional. Se não escolher uma imagem, utilizaremos uma capa
+            padrão do LPF.
+          </p>
+
+          <!--prévia da leitura-->
+          <aside class="adicionar-preview-leitura">
+            <h3>Prévia da sua leitura</h3>
+
+            <!--status-->
+            <div class="preview-linha">
+              <span>Status</span>
+              <strong id="previewStatus">Quero Ler</strong>
+            </div>
+
+            <!--progresso-->
+            <div class="preview-progresso">
+              <div class="preview-linha">
+                <span>Progresso</span>
+                <strong id="previewPercentual">—</strong>
+              </div>
+
+              <div
+                class="preview-barra"
+                role="progressbar"
+                aria-label="Progresso de leitura"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuetext="Progresso não informado"
+                id="previewProgresso"
+              >
+                <div class="preview-barra-valor" id="previewBarraValor"></div>
+              </div>
+
+              <p id="previewPaginas">Progresso não informado</p>
+            </div>
+
+            <!--avaliação-->
+            <div class="preview-linha">
+              <span>Avaliação</span>
+              <strong id="previewEstrelas">☆☆☆☆☆</strong>
+            </div>
+          </aside>
+        </div>
+
+        <!--coluna dos campos-->
+        <div class="adicionar-coluna-campos">
+          <h2>Informações do livro</h2>
+
+          <!--titulo-->
+          <div class="adicionar-campo">
+            <label for="novoTitulo"> Título do livro * </label>
+
+            <input
+              type="text"
+              id="novoTitulo"
+              placeholder="Digite o título do livro"
+              maxlength="120"
+              required
+            />
+          </div>
+
+          <!--autor-->
+          <div class="adicionar-campo">
+            <label for="novoAutor"> Autor * </label>
+
+            <input
+              type="text"
+              id="novoAutor"
+              placeholder="Digite o nome do autor"
+              maxlength="120"
+              required
+            />
+          </div>
+
+          <!--genero e ano-->
+          <div class="adicionar-linha-campos">
+            <div class="adicionar-campo">
+              <label for="novoGenero"> Gênero * </label>
+
+              <input
+                type="text"
+                id="novoGenero"
+                placeholder="Ex.: Romance"
+                maxlength="60"
+                required
+              />
+            </div>
+
+            <div class="adicionar-campo">
+              <label for="novoAno"> Ano de publicação </label>
+
+              <input
+                type="number"
+                id="novoAno"
+                min="1"
+                max="2100"
+                placeholder="Opcional"
+              />
+            </div>
+          </div>
+
+          <!--status-->
+          <div class="adicionar-campo">
+            <label for="novoStatus"> Status da leitura </label>
+
+            <select id="novoStatus">
+              <option value="quero-ler">Quero Ler</option>
+
+              <option value="lendo">Lendo</option>
+
+              <option value="lido">Lido</option>
+            </select>
+          </div>
+
+          <!--paginas-->
+          <div class="adicionar-linha-campos">
+            <div class="adicionar-campo">
+              <label for="novoTotalPaginas"> Total de páginas </label>
+
+              <input
+                type="number"
+                id="novoTotalPaginas"
+                min="1"
+                step="1"
+                placeholder="Opcional"
+              />
+            </div>
+
+            <div class="adicionar-campo">
+              <label for="novoPaginasLidas"> Páginas lidas </label>
+
+              <input
+                type="number"
+                id="novoPaginasLidas"
+                min="0"
+                step="1"
+                placeholder="Opcional"
+              />
+            </div>
+          </div>
+
+          <p class="adicionar-ajuda">
+            O progresso será calculado automaticamente quando o total de páginas
+            for informado.
+          </p>
+
+          <!--avaliação-->
+          <div class="adicionar-campo">
+            <label for="novaAvaliacao"> Avaliação (opcional) </label>
+
+            <select id="novaAvaliacao">
+              <option value="">Sem avaliação</option>
+
+              <option value="1">★</option>
+              <option value="2">★★</option>
+              <option value="3">★★★</option>
+              <option value="4">★★★★</option>
+              <option value="5">★★★★★</option>
+            </select>
+          </div>
+
+          <!--comentario-->
+          <div class="adicionar-campo">
+            <label for="novoComentario"> Comentário (opcional) </label>
+
+            <textarea
+              id="novoComentario"
+              rows="4"
+              maxlength="500"
+              placeholder="Registre suas impressões sobre o livro..."
+            ></textarea>
+          </div>
+
+          <!--mensagem de retornoo-->
+          <p
+            id="mensagemCadastro"
+            class="adicionar-mensagem"
+            role="status"
+            aria-live="polite"
+            hidden
+          ></p>
+
+          <!--botões-->
+          <div class="adicionar-acoes">
+            <a href="MinhaEstante.html" class="adicionar-cancelar">
+              Cancelar
+            </a>
+
+            <button type="submit" class="adicionar-salvar">
+              Adicionar à Minha Estante
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!--info de baixo-->
+      <aside class="adicionar-observacao">
+        <p>
+          <strong>Sua estante, suas leituras.</strong>
+          Você também pode cadastrar livros que lê fora da plataforma e
+          acompanhar seu progresso por aqui.
+        </p>
+      </aside>
+    </main>
+    <!--footer-->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="../assets/1_HOME_1/Logo.png" alt="" />
+
+            <strong>LPF - Livros para o Futuro</strong>
+          </div>
+
+          <div class="footer-social">
+            <img
+              src="../assets/1_HOME_1/redes.png"
+              alt="Facebook, YouTube e Instagram"
+            />
+          </div>
+        </div>
+
+        <div class="footer-info">
+          <div class="footer-column">
+            <h3>Contatos:</h3>
+            <p>WhatsApp: número de contato</p>
+            <p>E-mail: contato do projeto</p>
+            <p>SAC: número de atendimento</p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Central de ajuda para associados:</h3>
+            <p>Termos de serviço e política de privacidade</p>
+            <p>Políticas de cookies</p>
+            <p>Informações institucionais do LPF</p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Suporte:</h3>
+            <p>SAC: número de atendimento</p>
+            <p>WhatsApp: número de contato</p>
+            <p>E-mail: contato do projeto</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 LPF - Livros para o Futuro</p>
+        </div>
+      </div>
+    </footer>
+
+    <!--acessibilidade-->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <!--javascript-->
+    <script src="../js/adicionar-livro.js" defer></script>
+    <script src="../js/livros.js" defer></script>
+    <script src="../js/estante.js" defer></script>
+    <script src="../js/menu-lpf.js" defer></script>
+  </body>
+</html>
