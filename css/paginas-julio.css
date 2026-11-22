@@ -456,14 +456,12 @@
   display: none;
 }
 
-/*animação do botão VER MAIS*/
-
-/* Animação dos novos livros */
-.pagina-descobrir .livro-card[data-extra='true']:not([hidden]) {
+/* Animação para todos os cards de Descobrir */
+.pagina-descobrir .livro-card.livro-animando:not([hidden]) {
   animation: aparecerLivro 0.6s ease-out both;
 }
 
-/* Movimento suave de entrada */
+/* Entrada suave dos livros */
 @keyframes aparecerLivro {
   from {
     opacity: 0;
@@ -476,9 +474,9 @@
   }
 }
 
-/* Respeitar preferência por menos movimento */
+/* Acessibilidade: reduzir movimento */
 @media (prefers-reduced-motion: reduce) {
-  .pagina-descobrir .livro-card[data-extra='true']:not([hidden]) {
+  .pagina-descobrir .livro-card.livro-animando:not([hidden]) {
     animation: none;
   }
 }

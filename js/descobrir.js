@@ -122,15 +122,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // PESQUISAR E FILTRAR LIVROS
-  function filtrarLivros() {
+  function filtrarLivros(animarTodos = false) {
     const pesquisa = normalizarTexto(campoBusca.value);
     const generoSelecionado = filtroGenero.value;
 
-    const filtrosAtivos = pesquisa !== '' || generoSelecionado !== 'todos';
-
     let livrosEncontrados = 0;
+    let extrasEncontrados = 0;
 
-    const cards = document.querySelectorAll('.livro-card');
+    const cards = gradeLivros.querySelectorAll('.livro-card');
+    const cardsParaAnimar = [];
 
     cards.forEach((card) => {
       const titulo = card.querySelector('.livro-titulo').textContent;
@@ -147,47 +147,83 @@ document.addEventListener('DOMContentLoaded', () => {
       const correspondeGenero =
         generoSelecionado === 'todos' || generos.includes(generoSelecionado);
 
-      // Durante uma pesquisa, considerar todos os livros.
-      // Sem filtros, os extras aparecem apenas após o clique.
-      const podeExibir =
-        filtrosAtivos || extrasVisiveis || card.dataset.extra !== 'true';
+      const correspondeAosFiltros = correspondePesquisa && correspondeGenero;
 
-      const exibirLivro =
-        correspondePesquisa && correspondeGenero && podeExibir;
+      const ehExtra = card.dataset.extra === 'true';
+
+      // Verificar se existem livros extras para o filtro.
+      if (ehExtra && correspondeAosFiltros) {
+        extrasEncontrados++;
+      }
+
+      // Os extras só aparecem depois do clique em Ver mais.
+      const podeExibir = !ehExtra || extrasVisiveis;
+
+      const exibirLivro = correspondeAosFiltros && podeExibir;
+      const estavaOculto = card.hidden;
 
       card.hidden = !exibirLivro;
 
+      // Remover animação anterior para permitir reiniciá-la.
+      card.classList.remove('livro-animando');
+
       if (exibirLivro) {
         livrosEncontrados++;
+
+        if (animarTodos || estavaOculto) {
+          cardsParaAnimar.push(card);
+        }
       }
     });
 
-    // MENSAGEM DE NENHUM RESULTADO
+    // Controlar o botão Ver mais.
+    const existemExtrasOcultos = !extrasVisiveis && extrasEncontrados > 0;
+
+    areaVerMais.hidden = !existemExtrasOcultos;
+
+    // Mensagem de resultados vazios.
     mensagemBusca.hidden = livrosEncontrados > 0;
 
-    // EXIBIÇÃO DO BOTÃO VER MAIS
-    areaVerMais.hidden =
-      filtrosAtivos || extrasVisiveis || livrosExtras.length === 0;
+    if (livrosEncontrados === 0) {
+      mensagemBusca.textContent = existemExtrasOcultos
+        ? 'Nenhum livro entre os oito iniciais. Clique em Ver mais livros para encontrar outras obras.'
+        : 'Nenhum livro encontrado.';
+    }
+
+    // Aplicar animação aos cards exibidos.
+    if (cardsParaAnimar.length > 0) {
+      void gradeLivros.offsetWidth;
+
+      cardsParaAnimar.forEach((card) => {
+        card.classList.add('livro-animando');
+      });
+    }
   }
 
   // LUPA E TECLA ENTER
   formulario.addEventListener('submit', (evento) => {
     evento.preventDefault();
-    filtrarLivros();
+    filtrarLivros(true);
   });
 
   // PESQUISA ENQUANTO DIGITA
-  campoBusca.addEventListener('input', filtrarLivros);
+  campoBusca.addEventListener('input', () => {
+    extrasVisiveis = false;
+    filtrarLivros(false);
+  });
 
   // FILTRO DE GÊNERO
-  filtroGenero.addEventListener('change', filtrarLivros);
+  filtroGenero.addEventListener('change', () => {
+    extrasVisiveis = false;
+    filtrarLivros(true);
+  });
 
   // BOTÃO VER MAIS
   botaoVerMais.addEventListener('click', () => {
     extrasVisiveis = true;
-    filtrarLivros();
+    filtrarLivros(true);
   });
 
   // EXIBIÇÃO INICIAL
-  filtrarLivros();
+  filtrarLivros(true);
 });
