@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha Estante| LPF</title>
+    <link rel="stylesheet" href="../css/paginas-julio.css" />
+  </head>
+  <body class="pagina-lpf pagina-descobrir pagina-estante">
+    <!--header-->
+    <header class="cabecalho">
+      <div class="cabecalho-conteudo">
+        <a href="../index.html" class="logo">
+          <img
+            src="../assets/1_HOME_1/Logo.png"
+            alt="Logo dos Livros para o Futuro"
+          />
+          <span>L.P.F</span>
+        </a>
+        <!--botão MENU HAMBURGUER-->
+        <button
+          type="button"
+          class="menu-toggle"
+          id="botaoMenu"
+          aria-label="Abrir menu de navegação"
+          aria-controls="menuPrincipal"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!--nav principal-->
+        <nav class="menu" id="menuPrincipal" aria-label="Navegação principal">
+          <a href="../index.html">Início</a>
+
+          <a href="MinhaEstante.html" aria-current="page"> Minha Estante </a>
+
+          <a href="Descobrir.html"> Descobrir </a>
+
+          <a href="Comunidade.html"> Comunidade </a>
+
+          <a href="planosdefidelidade.html"> Planos </a>
+        </nav>
+
+        <a href="Entrar.html" class="perfil">Entrar</a>
+      </div>
+    </header>
+
+    <!--conteudo principal-->
+    <main class="conteudo-principal estante-main">
+      <!--introdução-->
+      <section class="estante-introducao">
+        <div class="estante-cabecalho">
+          <div>
+            <h1>Minha Estante</h1>
+
+            <p>
+              Organize suas leituras, acompanhe seu progresso e registre suas
+              avaliações.
+            </p>
+          </div>
+
+          <a href="AdicionarLivro.html" class="estante-adicionar">
+            <span aria-hidden="true">+</span>
+            Adicionar Livro
+          </a>
+        </div>
+      </section>
+
+      <!--resumo-->
+      <section class="estante-resumo" aria-label="Resumo das leituras">
+        <article class="resumo-card">
+          <span>Total de livros</span>
+          <strong id="totalLivros">0</strong>
+        </article>
+
+        <article class="resumo-card">
+          <span>Quero Ler</span>
+          <strong id="totalQueroLer">0</strong>
+        </article>
+
+        <article class="resumo-card">
+          <span>Lendo</span>
+          <strong id="totalLendo">0</strong>
+        </article>
+
+        <article class="resumo-card">
+          <span>Lido</span>
+          <strong id="totalLidos">0</strong>
+        </article>
+      </section>
+
+      <!--filtros-->
+      <section class="estante-controles">
+        <h2>Seus livros</h2>
+
+        <div class="estante-filtro">
+          <label for="filtroStatus"> Filtrar por status </label>
+
+          <select id="filtroStatus">
+            <option value="todos">Todos os livros</option>
+
+            <option value="quero-ler">Quero Ler</option>
+
+            <option value="lendo">Lendo</option>
+
+            <option value="lido">Lido</option>
+          </select>
+        </div>
+      </section>
+
+      <!--livros salvos-->
+      <section class="estante-livros" aria-label="Livros da minha estante">
+        <div class="estante-grid" id="gradeEstante">
+          <!-- Os livros serão carregados pelo JavaScript -->
+        </div>
+
+        <!--msg quando estante estiver vazia-->
+        <div class="estante-vazia" id="estanteVazia" hidden>
+          <h2>Sua estante está vazia</h2>
+
+          <p>
+            Explore nosso catálogo e adicione livros para começar a organizar
+            suas leituras.
+          </p>
+
+          <a href="Descobrir.html" class="estante-explorar">
+            Explorar livros
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!--janela de gerenciamento de leitura-->
+    <dialog
+      class="estante-modal"
+      id="modalEstante"
+      aria-labelledby="modalTitulo"
+    >
+      <div class="modal-topo">
+        <h2 id="modalTitulo">Gerenciar leitura</h2>
+
+        <button
+          type="button"
+          id="fecharModal"
+          class="modal-fechar"
+          aria-label="Fechar janela"
+        >
+          &times;
+        </button>
+      </div>
+
+      <p id="modalNomeLivro" class="modal-livro"></p>
+
+      <!--opções iniciais-->
+      <div id="modalAcoes" class="modal-acoes">
+        <button type="button" class="modal-acessar" disabled>
+          Acessar leitura — em integração
+        </button>
+
+        <button type="button" id="abrirEdicao" class="modal-editar">
+          Editar leitura
+        </button>
+
+        <button type="button" id="removerLivro" class="modal-remover">
+          Remover da Minha Estante
+        </button>
+      </div>
+
+      <!--form de edição-->
+      <form id="formEdicaoLivro" class="form-edicao" hidden>
+        <label for="edicaoStatus">Status da leitura</label>
+        <select id="edicaoStatus" required>
+          <option value="quero-ler">Quero Ler</option>
+          <option value="lendo">Lendo</option>
+          <option value="lido">Lido</option>
+        </select>
+
+        <div class="edicao-paginas">
+          <div>
+            <label for="edicaoLidas">Páginas lidas</label>
+            <input type="number" id="edicaoLidas" min="0" step="1" required />
+          </div>
+
+          <div>
+            <label for="edicaoTotal">Total de páginas</label>
+            <input
+              type="number"
+              id="edicaoTotal"
+              min="1"
+              step="1"
+              placeholder="Opcional"
+            />
+          </div>
+        </div>
+
+        <label for="edicaoAvaliacao">Avaliação</label>
+        <select id="edicaoAvaliacao">
+          <option value="">Sem avaliação</option>
+          <option value="1">★</option>
+          <option value="2">★★</option>
+          <option value="3">★★★</option>
+          <option value="4">★★★★</option>
+          <option value="5">★★★★★</option>
+        </select>
+
+        <label for="edicaoComentario">Comentário (opcional)</label>
+        <textarea
+          id="edicaoComentario"
+          rows="3"
+          maxlength="500"
+          placeholder="O que você achou do livro?"
+        ></textarea>
+
+        <p id="erroEdicao" class="edicao-erro" role="alert" hidden></p>
+
+        <div class="edicao-botoes">
+          <button type="button" id="cancelarEdicao">Cancelar</button>
+
+          <button type="submit">Salvar alterações</button>
+        </div>
+      </form>
+    </dialog>
+
+    <!--footer-->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="../assets/1_HOME_1/Logo.png" alt="" />
+
+            <strong>LPF - Livros para o Futuro</strong>
+          </div>
+
+          <div class="footer-social">
+            <img
+              src="../assets/1_HOME_1/redes.png"
+              alt="Facebook, YouTube e Instagram"
+            />
+          </div>
+        </div>
+
+        <div class="footer-info">
+          <div class="footer-column">
+            <h3>Contatos:</h3>
+            <p>WhatsApp: número de contato</p>
+            <p>E-mail: contato do projeto</p>
+            <p>SAC: número de atendimento</p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Central de ajuda para associados:</h3>
+            <p>Termos de serviço e política de privacidade</p>
+            <p>Políticas de cookies</p>
+            <p>Informações institucionais do LPF</p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Suporte:</h3>
+            <p>SAC: número de atendimento</p>
+            <p>WhatsApp: número de contato</p>
+            <p>E-mail: contato do projeto</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 LPF - Livros para o Futuro</p>
+        </div>
+      </div>
+    </footer>
+
+    <!--acessibilidade-->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <!--javascript-->
+    <script src="../js/livros.js" defer></script>
+    <script src="../js/estante.js" defer></script>
+    <script src="../js/minha-estante.js" defer></script>
+    <script src="../js/menu-lpf.js" defer></script>
+  </body>
+</html>

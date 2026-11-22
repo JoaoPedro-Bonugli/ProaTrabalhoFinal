@@ -1,23 +1,23 @@
 /* CORES DO PROJETO */
 .pagina-descobrir {
-    --cor-marrom: #5d3a29;
-    --cor-texto: #3e2a20;
-    --cor-fundo: #fdf6ec;
-    --cor-card: #fbf7f0;
-    --cor-borda: #bda38f;
+  --cor-marrom: #5d3a29;
+  --cor-texto: #3e2a20;
+  --cor-fundo: #fdf6ec;
+  --cor-card: #fbf7f0;
+  --cor-borda: #bda38f;
 
-    margin: 0;
-    min-height: 100vh;
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 /* config gerais */
 .pagina-descobrir *,
 .pagina-descobrir *::before,
 .pagina-descobrir *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* -------------------------------------
@@ -25,640 +25,643 @@
 ----------------------------------------*/
 
 .pagina-descobrir a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* header */
 
 .pagina-descobrir .cabecalho {
-    background-color: var(--cor-marrom);
-    width: 100%;
+  background-color: var(--cor-marrom);
+  width: 100%;
 }
 
 .pagina-descobrir .cabecalho-conteudo {
-    max-width: 1200px;
-    min-height: 90px;
-    margin: 0 auto;
-    padding: 15px 24px;
+  max-width: 1200px;
+  min-height: 90px;
+  margin: 0 auto;
+  padding: 15px 24px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 /* logo */
 .pagina-descobrir .logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 
-    color: white;
-    font-size: 24px;
-    font-weight: 700;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .pagina-descobrir .logo img {
-    width: 44px;
-    height: 44px;
-    object-fit: contain;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
 }
 
 /* menu */
 .pagina-descobrir .menu {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .pagina-descobrir .menu a {
-    color: white;
-    font-size: 15px;
-    padding: 8px 0;
-    border-bottom: 2px solid transparent;
+  color: white;
+  font-size: 15px;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
 }
 
 .pagina-descobrir .menu a:hover,
-.pagina-descobrir .menu a[aria-current="page"] {
-    border-bottom-color: white;
+.pagina-descobrir .menu a[aria-current='page'] {
+  border-bottom-color: white;
 }
 
 /* perfil */
 .pagina-descobrir .perfil {
-    color: white;
-    font-size: 14px;
+  color: white;
+  font-size: 14px;
 }
 
 /* conteudo principal */
 
 .pagina-descobrir .conteudo-principal {
-    max-width: 1168px;
-    margin: 0 auto;
-    padding: 55px 24px 90px;
+  max-width: 1168px;
+  margin: 0 auto;
+  padding: 55px 24px 90px;
 }
 
 /* introdução */
 .pagina-descobrir .introducao {
-    margin-bottom: 36px;
+  margin-bottom: 36px;
 }
 
 .pagina-descobrir .introducao h1 {
-    margin: 0 0 12px;
-    color: var(--cor-texto);
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.2;
+  margin: 0 0 12px;
+  color: var(--cor-texto);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .pagina-descobrir .introducao p {
-    margin: 0;
-    color: #756257;
-    font-size: 16px;
-    line-height: 1.6;
+  margin: 0;
+  color: #756257;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 /*pesquisa e filtros*/
 
 .pagina-descobrir .area-filtros {
-    width: 100%;
-    min-height: 56px;
-    margin-bottom: 38px;
-    padding: 0 18px;
+  width: 100%;
+  min-height: 56px;
+  margin-bottom: 38px;
+  padding: 0 18px;
 
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 
-    background-color: #ffffff;
-    border: 1px solid var(--cor-borda);
-    border-radius: 18px;
+  background-color: #ffffff;
+  border: 1px solid var(--cor-borda);
+  border-radius: 18px;
 
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .pagina-descobrir .area-filtros:focus-within {
-    border-color: var(--cor-marrom);
-    box-shadow: 0 0 0 3px rgba(93, 58, 41, 0.12);
+  border-color: var(--cor-marrom);
+  box-shadow: 0 0 0 3px rgba(93, 58, 41, 0.12);
 }
 
 .pagina-descobrir .input-busca {
-    flex: 1;
-    min-width: 0;
-    height: 52px;
-    padding: 0;
+  flex: 1;
+  min-width: 0;
+  height: 52px;
+  padding: 0;
 
-    background: transparent;
-    color: var(--cor-texto);
-    font-size: 16px;
+  background: transparent;
+  color: var(--cor-texto);
+  font-size: 16px;
 
-    border: none;
-    outline: none;
-    box-shadow: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 .pagina-descobrir .input-busca::placeholder {
-    color: #7f6a5d;
+  color: #7f6a5d;
 }
 
 /*javascript da pesquisa de livros*/
 
 /* Oculta os cards filtrados pelo JavaScript */
 .pagina-descobrir .livro-card[hidden] {
-    display: none;
+  display: none;
 }
 
 /* Mensagem quando não há resultados */
 .pagina-descobrir .mensagem-busca {
-    text-align: center;
-    margin: 40px 0;
-    color: var(--cor-texto);
-    font-size: 16px;
+  text-align: center;
+  margin: 40px 0;
+  color: var(--cor-texto);
+  font-size: 16px;
 }
 
 .pagina-descobrir .mensagem-busca[hidden] {
-    display: none;
+  display: none;
 }
 
 /* filtro genero */
 
 .pagina-descobrir .filtro-genero {
-    position: relative;
+  position: relative;
 }
 
 .pagina-descobrir .filtro-genero summary {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    width: 30px;
-    height: 36px;
-    cursor: pointer;
-    color: var(--cor-marrom);
-    list-style: none;
+  width: 30px;
+  height: 36px;
+  cursor: pointer;
+  color: var(--cor-marrom);
+  list-style: none;
 }
 
 .pagina-descobrir .filtro-genero summary::-webkit-details-marker {
-    display: none;
+  display: none;
 }
 
 .pagina-descobrir .filtro-genero summary span {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .pagina-descobrir .filtro-opcoes {
-    position: absolute;
-    top: 42px;
-    right: 0;
-    z-index: 10;
+  position: absolute;
+  top: 42px;
+  right: 0;
+  z-index: 10;
 
-    width: 230px;
-    padding: 16px;
+  width: 230px;
+  padding: 16px;
 
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 
-    background-color: #fffdfa;
-    border: 1px solid var(--cor-borda);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px #3e2a201a;
+  background-color: #fffdfa;
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px #3e2a201a;
 }
 
 .pagina-descobrir .filtro-opcoes label {
-    font-size: 13px;
-    font-weight: 600;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .pagina-descobrir .filtro-opcoes select {
-    width: 100%;
-    padding: 10px;
+  width: 100%;
+  padding: 10px;
 
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
 
-    border: 1px solid var(--cor-borda);
-    border-radius: 8px;
-    font-size: 13px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  font-size: 13px;
 }
 
 /* icone BUSCA */
 
 .pagina-descobrir .icone-busca {
-    color: var(--cor-marrom);
-    font-size: 22px;
-    line-height: 1;
+  color: var(--cor-marrom);
+  font-size: 22px;
+  line-height: 1;
 }
 
 /* ajuste posicionamento */
 
 .pagina-descobrir .conteudo-principal {
-    max-width: 1120px;
-    padding-top: 65px;
+  max-width: 1120px;
+  padding-top: 65px;
 }
 
 .pagina-descobrir .introducao {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 /*ajuste dos controle de pesquisa*/
 
 .pagina-descobrir .form-busca {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    min-height: 54px;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 54px;
+  gap: 10px;
 }
 
 .pagina-descobrir .form-busca .input-busca {
-    flex: 1;
-    min-width: 0;
+  flex: 1;
+  min-width: 0;
 }
 
 /* icone FILTRO */
 
 .pagina-descobrir .filtro-genero summary {
-    cursor: pointer;
-    border-radius: 6px;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
 .pagina-descobrir .filtro-genero summary svg {
-    display: block;
+  display: block;
 }
 
 /* botão LUPA */
 
 .pagina-descobrir .botao-busca {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    width: 36px;
-    height: 36px;
-    padding: 6px;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
 
-    background: transparent;
-    color: var(--cor-marrom);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+  background: transparent;
+  color: var(--cor-marrom);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .pagina-descobrir .botao-busca:hover,
 .pagina-descobrir .filtro-genero summary:hover {
-    background-color: #f1e6d8;
+  background-color: #f1e6d8;
 }
 
 .pagina-descobrir .botao-busca:focus-visible,
 .pagina-descobrir .filtro-genero summary:focus-visible {
-    outline: 2px solid var(--cor-marrom);
-    outline-offset: 2px;
+  outline: 2px solid var(--cor-marrom);
+  outline-offset: 2px;
 }
 
 /* botão ENTRAR */
 
 .pagina-descobrir .perfil {
-    display: inline-block;
-    padding: 12px 28px;
+  display: inline-block;
+  padding: 12px 28px;
 
-    background-color: #fff7ed;
-    color: var(--cor-marrom);
+  background-color: #fff7ed;
+  color: var(--cor-marrom);
 
-    border-radius: 6px;
-    font-weight: 600;
+  border-radius: 6px;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
-    .pagina-descobrir .area-filtros {
-        margin-bottom: 28px;
-    }
+  .pagina-descobrir .area-filtros {
+    margin-bottom: 28px;
+  }
 
-    .pagina-descobrir .conteudo-principal {
-        padding-top: 35px;
-    }
+  .pagina-descobrir .conteudo-principal {
+    padding-top: 35px;
+  }
 }
 
 /*catalogo dos livros*/
 
 .pagina-descobrir .grade-livros {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    column-gap: 24px;
-    row-gap: 68px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 24px;
+  row-gap: 68px;
 
-    max-width: 1040px;
-    margin: 0 auto;
+  max-width: 1040px;
+  margin: 0 auto;
 }
 
 /* card individual */
 .pagina-descobrir .livro-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    min-width: 0;
-    min-height: 365px;
-    padding: 16px 14px 12px;
+  min-width: 0;
+  min-height: 365px;
+  padding: 16px 14px 12px;
 
-    background-color: #fffaf2;
-    border: 1px solid var(--cor-borda);
-    border-radius: 18px;
+  background-color: #fffaf2;
+  border: 1px solid var(--cor-borda);
+  border-radius: 18px;
 
-    text-align: center;
+  text-align: center;
 }
 
 /* capa */
 .pagina-descobrir .livro-capa {
-    display: block;
-    width: 145px;
-    max-width: 100%;
-    height: 205px;
-    margin-bottom: 12px;
+  display: block;
+  width: 145px;
+  max-width: 100%;
+  height: 205px;
+  margin-bottom: 12px;
 
-    object-fit: contain;
+  object-fit: contain;
 }
 
 /* titulo e leitor */
 .pagina-descobrir .livro-dados {
-    width: 100%;
-    min-height: 0;
+  width: 100%;
+  min-height: 0;
 }
 
 .pagina-descobrir .livro-titulo {
-    margin: 0 0 6px;
+  margin: 0 0 6px;
 
-    color: var(--cor-texto);
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.25;
+  color: var(--cor-texto);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
 }
 
 .pagina-descobrir .livro-autor {
-    margin: 0;
+  margin: 0;
 
-    color: #665348;
-    font-size: 12px;
-    line-height: 1.3;
+  color: #665348;
+  font-size: 12px;
+  line-height: 1.3;
 }
 
 /* botão VER LIVRO */
 .pagina-descobrir .livro-botao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    width: 100%;
-    min-height: 31px;
-    margin-top: 10px;
-    padding: 6px 10px;
+  width: 100%;
+  min-height: 31px;
+  margin-top: 10px;
+  padding: 6px 10px;
 
-    background-color: #e8d8c1;
-    color: var(--cor-texto);
+  background-color: #e8d8c1;
+  color: var(--cor-texto);
 
-    border-radius: 8px;
-    font-size: 12px;
-    font-weight: 700;
-    transition: background-color 0.2s ease;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
 }
 
 .pagina-descobrir .livro-botao:hover {
-    background-color: #d9bea0;
+  background-color: #d9bea0;
 }
 
 .pagina-descobrir .livro-botao:focus-visible {
-    outline: 3px solid var(--cor-marrom);
-    outline-offset: 3px;
+  outline: 3px solid var(--cor-marrom);
+  outline-offset: 3px;
 }
 
 /* genero */
 .pagina-descobrir .livro-genero {
-    margin: 8px 0 0;
+  margin: 8px 0 0;
 
-    color: #806c60;
-    font-size: 9px;
-    font-weight: 600;
-    line-height: 1.2;
-    text-transform: uppercase;
+  color: #806c60;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 /* botão VER MAIS */
 .pagina-descobrir .area-ver-mais {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 /*o botão VER MAIS LIVROS sumir quando necessário*/
 .pagina-descobrir .area-ver-mais[hidden] {
-    display: none;
+  display: none;
 }
 
 /*animação do botão VER MAIS*/
 
 /* Animação dos novos livros */
-.pagina-descobrir .livro-card[data-extra="true"]:not([hidden]) {
-    animation: aparecerLivro 0.6s ease-out both;
+.pagina-descobrir .livro-card[data-extra='true']:not([hidden]) {
+  animation: aparecerLivro 0.6s ease-out both;
 }
 
 /* Movimento suave de entrada */
 @keyframes aparecerLivro {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Respeitar preferência por menos movimento */
 @media (prefers-reduced-motion: reduce) {
-    .pagina-descobrir .livro-card[data-extra="true"]:not([hidden]) {
-        animation: none;
-    }
+  .pagina-descobrir .livro-card[data-extra='true']:not([hidden]) {
+    animation: none;
+  }
 }
 .pagina-descobrir #verMaisLivros {
-    min-width: 180px;
-    height: 48px;
-    padding: 0 24px;
+  min-width: 180px;
+  height: 48px;
+  padding: 0 24px;
 
-    background-color: #5f3a29;
-    color: #fffaf2;
+  background-color: #5f3a29;
+  color: #fffaf2;
 
-    border: none;
-    border-radius: 12px;
+  border: none;
+  border-radius: 12px;
 
-    font-size: 16px;
-    font-weight: 600;
-    font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
 
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .pagina-descobrir #verMaisLivros:hover {
-    background-color: #744733;
-    transform: translateY(-2px);
+  background-color: #744733;
+  transform: translateY(-2px);
 }
 
 .pagina-descobrir #verMaisLivros:active {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .pagina-descobrir #verMaisLivros:focus-visible {
-    outline: 3px solid #c8a98d;
-    outline-offset: 3px;
+  outline: 3px solid #c8a98d;
+  outline-offset: 3px;
 }
 
 /* FOOTER */
 
 .pagina-descobrir .footer {
-    width: 100%;
-    background-color: #3e2a20;
-    color: #fdf6ec;
-    padding: 46px 24px 24px;
+  width: 100%;
+  background-color: #3e2a20;
+  color: #fdf6ec;
+  padding: 46px 24px 24px;
 }
 
 .pagina-descobrir .footer-container {
-    max-width: 1120px;
-    margin: 0 auto;
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
 /*parte de cima*/
 
 .pagina-descobrir .footer-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 
-    padding-bottom: 30px;
-    border-bottom: 1px solid #6b5042;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #6b5042;
 }
 
 .pagina-descobrir .footer-brand {
-    display: flex;
-    align-items: center;
-    gap: 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 .pagina-descobrir .footer-brand img {
-    width: 65px;
-    height: 65px;
-    object-fit: contain;
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
 }
 
 .pagina-descobrir .footer-brand strong {
-    font-size: 18px;
-    font-weight: 700;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 /*redes sociais*/
 
 .pagina-descobrir .footer-social {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .pagina-descobrir .footer-social img {
-    display: block;
-    width: 140px;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+  display: block;
+  width: 140px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 /* coluna das info */
 
 .pagina-descobrir .footer-info {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
 
-    padding: 30px 0 40px;
-    border-bottom: 1px solid #6b5042;
+  padding: 30px 0 40px;
+  border-bottom: 1px solid #6b5042;
 }
 
 .pagina-descobrir .footer-column h3 {
-    margin: 0 0 14px;
+  margin: 0 0 14px;
 
-    color: #fdf6ec;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: underline;
+  color: #fdf6ec;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 .pagina-descobrir .footer-column p {
-    margin: 0 0 10px;
+  margin: 0 0 10px;
 
-    color: #e2d1c4;
-    font-size: 12px;
-    line-height: 1.7;
+  color: #e2d1c4;
+  font-size: 12px;
+  line-height: 1.7;
 }
 
 /*parte de baixo*/
 
 .pagina-descobrir .footer-bottom {
-    padding-top: 20px;
-    text-align: center;
+  padding-top: 20px;
+  text-align: center;
 }
 
 .pagina-descobrir .footer-bottom p {
-    margin: 0;
-    color: #cfb9aa;
-    font-size: 11px;
+  margin: 0;
+  color: #cfb9aa;
+  font-size: 11px;
 }
 
 /*espaço catálogo e footer*/
 
 .pagina-descobrir .conteudo-principal {
-    padding-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 /* responsividade */
 
 @media (max-width: 768px) {
-    .pagina-descobrir .cabecalho-conteudo {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .pagina-descobrir .cabecalho-conteudo {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    .pagina-descobrir .menu {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
+  .pagina-descobrir .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
 
-    .pagina-descobrir .conteudo-principal {
-        padding: 35px 20px 60px;
-    }
+  .pagina-descobrir .conteudo-principal {
+    padding: 35px 20px 60px;
+  }
 
-    .pagina-descobrir .introducao h1 {
-        font-size: 28px;
-    }
+  .pagina-descobrir .introducao h1 {
+    font-size: 28px;
+  }
 }
 
 /*responsividade do catalogo*/
 
 @media (max-width: 1000px) {
-    .pagina-descobrir .grade-livros {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 24px;
-    }
+  .pagina-descobrir .grade-livros {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
 }
 
 @media (max-width: 520px) {
-    .pagina-descobrir .grade-livros {
-        grid-template-columns: 1fr;
-        max-width: 320px;
-        gap: 20px;
-    }
+  .pagina-descobrir .grade-livros {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    gap: 20px;
+  }
 }
-
 
 /* -------------------------------------
   LPF - PÁGINA APRESENTAÇÃO DO LIVRO
@@ -667,521 +670,1707 @@
 /*coonteudo principal*/
 
 .pagina-apresentacao .apresentacao-main {
-    max-width: 1168px;
-    margin: 0 auto;
-    padding: 48px 24px 80px;
+  max-width: 1168px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
 }
 
 /*voltar para Descobrir*/
 
 .pagina-apresentacao .apresentacao-voltar {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 
-    color: var(--cor-marrom);
-    font-size: 15px;
-    font-weight: 500;
+  color: var(--cor-marrom);
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .pagina-apresentacao .apresentacao-voltar:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /*introdução*/
 
 .pagina-apresentacao .apresentacao-introducao {
-    margin-bottom: 36px;
+  margin-bottom: 36px;
 }
 
 .pagina-apresentacao .apresentacao-caminho {
-    margin: 0 0 20px;
+  margin: 0 0 20px;
 
-    color: var(--cor-marrom);
-    font-size: 12px;
-    font-weight: 700;
+  color: var(--cor-marrom);
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .pagina-apresentacao .apresentacao-introducao h1 {
-    margin: 0 0 12px;
+  margin: 0 0 12px;
 
-    color: var(--cor-texto);
-    font-size: 42px;
-    line-height: 1.2;
+  color: var(--cor-texto);
+  font-size: 42px;
+  line-height: 1.2;
 }
 
 .pagina-apresentacao .apresentacao-introducao > p:last-child {
-    margin: 0;
+  margin: 0;
 
-    color: #856f61;
-    font-size: 17px;
-    line-height: 1.6;
+  color: #856f61;
+  font-size: 17px;
+  line-height: 1.6;
 }
 
 /*card principal*/
 
 .pagina-apresentacao .apresentacao-card {
-    display: grid;
-    grid-template-columns: 306px minmax(0, 1fr);
-    align-items: start;
-    gap: 44px;
+  display: grid;
+  grid-template-columns: 306px minmax(0, 1fr);
+  align-items: start;
+  gap: 44px;
 
-    padding: 34px;
+  padding: 34px;
 
-    background-color: #fffaf2;
-    border: 1px solid var(--cor-borda);
-    border-radius: 24px;
+  background-color: #fffaf2;
+  border: 1px solid var(--cor-borda);
+  border-radius: 24px;
 }
 
 /*capa livro*/
 
 .pagina-apresentacao .apresentacao-imagem {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    padding: 18px;
+  padding: 18px;
 
-    background-color: #f0e0cb;
-    border-radius: 18px;
+  background-color: #f0e0cb;
+  border-radius: 18px;
 }
 
 .pagina-apresentacao .apresentacao-imagem img {
-    display: block;
+  display: block;
 
-    width: 100%;
-    height: 430px;
+  width: 100%;
+  height: 430px;
 
-    object-fit: contain;
-    border-radius: 8px;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 /*infos*/
 
 .pagina-apresentacao .apresentacao-dados {
-    min-width: 0;
-    padding-top: 6px;
+  min-width: 0;
+  padding-top: 6px;
 }
 
 .pagina-apresentacao .apresentacao-etiqueta {
-    display: inline-block;
+  display: inline-block;
 
-    padding: 9px 20px;
-    margin-bottom: 22px;
+  padding: 9px 20px;
+  margin-bottom: 22px;
 
-    background-color: #f1e4d3;
-    color: var(--cor-marrom);
+  background-color: #f1e4d3;
+  color: var(--cor-marrom);
 
-    border-radius: 30px;
+  border-radius: 30px;
 
-    font-size: 11px;
-    font-weight: 700;
+  font-size: 11px;
+  font-weight: 700;
 }
 
 .pagina-apresentacao .apresentacao-dados h2 {
-    margin: 0 0 8px;
+  margin: 0 0 8px;
 
-    color: var(--cor-texto);
-    font-size: 40px;
-    line-height: 1.2;
+  color: var(--cor-texto);
+  font-size: 40px;
+  line-height: 1.2;
 }
 
 .pagina-apresentacao .apresentacao-autor {
-    margin: 0 0 26px;
+  margin: 0 0 26px;
 
-    padding-bottom: 25px;
+  padding-bottom: 25px;
 
-    color: #836c5d;
-    font-size: 19px;
+  color: #836c5d;
+  font-size: 19px;
 
-    border-bottom: 1px solid #e1ccba;
+  border-bottom: 1px solid #e1ccba;
 }
 
 /*details do livro*/
 
 .pagina-apresentacao .apresentacao-detalhes {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 
-    margin-bottom: 26px;
+  margin-bottom: 26px;
 }
 
 .pagina-apresentacao .detalhe-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
 
-    min-width: 0;
-    padding: 18px 16px;
+  min-width: 0;
+  padding: 18px 16px;
 
-    background-color: #f5ece1;
-    border-radius: 14px;
+  background-color: #f5ece1;
+  border-radius: 14px;
 }
 
 .pagina-apresentacao .detalhe-item span {
-    color: #836c5d;
-    font-size: 11px;
-    font-weight: 700;
+  color: #836c5d;
+  font-size: 11px;
+  font-weight: 700;
 }
 
 .pagina-apresentacao .detalhe-item strong {
-    color: var(--cor-texto);
-    font-size: 18px;
+  color: var(--cor-texto);
+  font-size: 18px;
 }
 
 .pagina-apresentacao .detalhe-item small {
-    color: #927d6e;
-    font-size: 11px;
+  color: #927d6e;
+  font-size: 11px;
 }
 
 /*descrição*/
 
 .pagina-apresentacao .apresentacao-descricao {
-    margin: 0 0 26px;
+  margin: 0 0 26px;
 
-    color: #816d60;
-    font-size: 16px;
-    line-height: 1.7;
+  color: #816d60;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 /*botão ADD A MINHA ESTANTE*/
 
 .pagina-apresentacao .apresentacao-botao {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
 
-    min-height: 54px;
-    padding: 12px 24px;
+  min-height: 54px;
+  padding: 12px 24px;
 
-    background-color: var(--cor-marrom);
-    color: #ffffff;
+  background-color: var(--cor-marrom);
+  color: #ffffff;
 
-    border: none;
-    border-radius: 10px;
+  border: none;
+  border-radius: 10px;
 
-    font-family: inherit;
-    font-size: 15px;
-    font-weight: 700;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
 
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .pagina-apresentacao .apresentacao-botao span {
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 1;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .pagina-apresentacao .apresentacao-botao:hover {
-    background-color: #764b37;
+  background-color: #764b37;
 }
 
 .pagina-apresentacao .apresentacao-botao:focus-visible {
-    outline: 3px solid #bda38f;
-    outline-offset: 3px;
+  outline: 3px solid #bda38f;
+  outline-offset: 3px;
 }
 
 .pagina-apresentacao .apresentacao-aviso {
-    margin: 12px 0 0;
+  margin: 12px 0 0;
 
-    color: #927d6e;
-    font-size: 12px;
+  color: #927d6e;
+  font-size: 12px;
 }
 
 /*sinopse e mais*/
 
 .pagina-apresentacao .apresentacao-inferior {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 18px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
 
-    margin-top: 24px;
+  margin-top: 24px;
 }
 
 .pagina-apresentacao .apresentacao-sinopse,
 .pagina-apresentacao .apresentacao-orientacao {
-    padding: 26px;
+  padding: 26px;
 
-    border-radius: 18px;
+  border-radius: 18px;
 }
 
 .pagina-apresentacao .apresentacao-sinopse {
-    background-color: #fffaf2;
-    border: 1px solid var(--cor-borda);
+  background-color: #fffaf2;
+  border: 1px solid var(--cor-borda);
 }
 
 .pagina-apresentacao .apresentacao-orientacao {
-    background-color: #f0e0cb;
+  background-color: #f0e0cb;
 }
 
 .pagina-apresentacao .apresentacao-inferior h2 {
-    margin: 0 0 16px;
+  margin: 0 0 16px;
 
-    color: var(--cor-texto);
-    font-size: 19px;
+  color: var(--cor-texto);
+  font-size: 19px;
 }
 
 .pagina-apresentacao .apresentacao-sinopse h2 {
-    padding-bottom: 14px;
-    border-bottom: 1px solid #e1ccba;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e1ccba;
 }
 
 .pagina-apresentacao .apresentacao-inferior p {
-    margin: 0;
+  margin: 0;
 
-    color: #765f52;
-    font-size: 14px;
-    line-height: 1.7;
+  color: #765f52;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 /*frase final*/
 
 .pagina-apresentacao .apresentacao-frase {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 
-    margin-top: 24px;
-    padding-top: 20px;
+  margin-top: 24px;
+  padding-top: 20px;
 
-    border-top: 1px solid #e1ccba;
+  border-top: 1px solid #e1ccba;
 }
 
 .pagina-apresentacao .apresentacao-frase strong {
-    font-size: 13px;
-    color: var(--cor-texto);
+  font-size: 13px;
+  color: var(--cor-texto);
 }
 
 .pagina-apresentacao .apresentacao-frase span {
-    font-size: 12px;
-    color: #927d6e;
+  font-size: 12px;
+  color: #927d6e;
 }
 
-/*respoonsividade*/
+/*botão livro já add*/
+
+.pagina-apresentacao .apresentacao-botao:disabled {
+  background-color: #927566;
+  cursor: default;
+  opacity: 0.85;
+}
+
+/* -------------------------------------
+        LPF - MINHA ESTANTE
+----------------------------------------*/
+
+/*conteudo principal*/
+
+.pagina-estante .estante-main {
+  max-width: 1168px;
+  min-height: 65vh;
+  margin: 0 auto;
+  padding: 55px 24px 90px;
+}
+
+/*titulo e botão ADD LIVRO*/
+
+.pagina-estante .estante-introducao {
+  margin-bottom: 35px;
+}
+
+.pagina-estante .estante-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.pagina-estante .estante-cabecalho h1 {
+  margin: 0 0 12px;
+
+  color: var(--cor-texto);
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.pagina-estante .estante-cabecalho p {
+  margin: 0;
+
+  color: #836c5d;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.pagina-estante .estante-adicionar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 14px 24px;
+  min-height: 48px;
+
+  background-color: var(--cor-marrom);
+  color: #ffffff;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pagina-estante .estante-adicionar span {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.pagina-estante .estante-adicionar:hover {
+  background-color: #764b37;
+}
+
+/*cards de resumo*/
+
+.pagina-estante .estante-resumo {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+
+  margin-bottom: 48px;
+}
+
+.pagina-estante .resumo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 24px;
+
+  background-color: #fffaf2;
+  border: 1px solid var(--cor-borda);
+  border-radius: 16px;
+}
+
+.pagina-estante .resumo-card span {
+  color: #806b5f;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.pagina-estante .resumo-card strong {
+  color: var(--cor-texto);
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/*filtro por status*/
+
+.pagina-estante .estante-controles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  margin-bottom: 28px;
+}
+
+.pagina-estante .estante-controles h2 {
+  margin: 0;
+
+  color: var(--cor-texto);
+  font-size: 25px;
+}
+
+.pagina-estante .estante-filtro {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pagina-estante .estante-filtro label {
+  color: var(--cor-texto);
+  font-size: 14px;
+}
+
+.pagina-estante .estante-filtro select {
+  min-width: 170px;
+  padding: 12px 15px;
+
+  background-color: #fffaf2;
+  color: var(--cor-texto);
+
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/*grade dos livro*/
+
+.pagina-estante .estante-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/*estante vazia*/
+
+.pagina-estante .estante-vazia {
+  padding: 55px 25px;
+  text-align: center;
+
+  background-color: #fffaf2;
+  border: 1px solid var(--cor-borda);
+  border-radius: 18px;
+}
+
+.pagina-estante .estante-vazia[hidden] {
+  display: none;
+}
+
+.pagina-estante .estante-vazia h2 {
+  margin: 0 0 12px;
+
+  color: var(--cor-texto);
+  font-size: 24px;
+}
+
+.pagina-estante .estante-vazia p {
+  margin: 0 auto 24px;
+  max-width: 440px;
+
+  color: #836c5d;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.pagina-estante .estante-explorar {
+  display: inline-block;
+  padding: 13px 24px;
+
+  background-color: var(--cor-marrom);
+  color: #ffffff;
+
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.pagina-estante .estante-explorar:hover {
+  background-color: #764b37;
+}
+
+/*acessbilidade dos controle*/
+
+.pagina-estante .estante-adicionar:focus-visible,
+.pagina-estante .estante-explorar:focus-visible,
+.pagina-estante .estante-filtro select:focus-visible {
+  outline: 3px solid #bda38f;
+  outline-offset: 3px;
+}
+
+/*card dos livros*/
+
+.pagina-estante .estante-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  padding: 22px;
+
+  background-color: #fffaf2;
+  border: 1px solid var(--cor-borda);
+  border-radius: 18px;
+
+  text-align: center;
+}
+
+.pagina-estante .estante-capa {
+  width: 130px;
+  max-width: 100%;
+  height: 185px;
+  object-fit: contain;
+}
+
+.pagina-estante .estante-card-titulo {
+  margin: 5px 0 0;
+  color: var(--cor-texto);
+  font-size: 17px;
+  line-height: 1.3;
+}
+
+.pagina-estante .estante-card-autor {
+  margin: 0;
+  color: #806b5f;
+  font-size: 13px;
+}
+
+.pagina-estante .estante-status {
+  padding: 7px 15px;
+  background-color: #f0e0cb;
+  color: var(--cor-marrom);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pagina-estante .estante-progresso-texto {
+  width: 100%;
+  margin: 5px 0 0;
+  color: #806b5f;
+  font-size: 12px;
+}
+
+.pagina-estante .estante-progresso-trilha {
+  width: 100%;
+  height: 9px;
+  overflow: hidden;
+  background-color: #e9ded2;
+  border-radius: 20px;
+}
+
+.pagina-estante .estante-progresso-valor {
+  height: 100%;
+  background-color: #603e2e;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+.pagina-estante .estante-avaliacao {
+  margin: 5px 0;
+  color: #85613f;
+  font-size: 13px;
+}
+
+.pagina-estante .estante-card-botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 38px;
+  margin-top: auto;
+  padding: 9px 15px;
+
+  background-color: #e8d8c1;
+  color: var(--cor-texto);
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.pagina-estante .estante-card-botao:hover {
+  background-color: #dcc6aa;
+}
+
+.pagina-estante .estante-card-botao:focus-visible {
+  outline: 3px solid var(--cor-marrom);
+  outline-offset: 3px;
+}
+
+.pagina-estante .estante-explorar[hidden] {
+  display: none;
+}
+
+/*MODAL DE LEITURA*/
+
+/*card interativo*/
+
+.pagina-estante .estante-card {
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.pagina-estante .estante-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(62, 42, 32, 0.12);
+}
+
+.pagina-estante .estante-card:focus-visible {
+  outline: 3px solid #603e2e;
+  outline-offset: 3px;
+}
+
+/*janela*/
+
+.pagina-estante .estante-modal {
+  width: min(500px, calc(100% - 32px));
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+
+  margin: auto;
+  padding: 28px;
+
+  background: #fffaf2;
+  color: #3e2a20;
+  border: 1px solid #bda38f;
+  border-radius: 18px;
+
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+.pagina-estante .estante-modal::backdrop {
+  background: rgba(30, 20, 14, 0.55);
+}
+
+/*cabeçalho do modal*/
+
+.pagina-estante .modal-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pagina-estante .modal-topo h2 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.pagina-estante .modal-fechar {
+  background: transparent;
+  color: #603e2e;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.pagina-estante .modal-livro {
+  margin: 10px 0 24px;
+  color: #806b5f;
+  font-size: 14px;
+}
+
+/*opções*/
+
+.pagina-estante .modal-acoes {
+  display: grid;
+  gap: 12px;
+}
+
+.pagina-estante .modal-acoes button {
+  padding: 14px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.pagina-estante .modal-acessar {
+  background: #e9ded2;
+  color: #806b5f;
+  cursor: not-allowed;
+}
+
+.pagina-estante .modal-editar {
+  background: #603e2e;
+  color: white;
+  cursor: pointer;
+}
+
+/*form*/
+
+.pagina-estante .form-edicao {
+  display: grid;
+  gap: 12px;
+}
+
+.pagina-estante .form-edicao label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.pagina-estante .form-edicao input,
+.pagina-estante .form-edicao select,
+.pagina-estante .form-edicao textarea {
+  width: 100%;
+  padding: 12px;
+
+  background: #fffdfa;
+  color: #3e2a20;
+  border: 1px solid #bda38f;
+  border-radius: 8px;
+
+  font: inherit;
+}
+
+.pagina-estante .edicao-paginas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.pagina-estante .edicao-paginas > div {
+  display: grid;
+  gap: 8px;
+}
+
+.pagina-estante .edicao-botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.pagina-estante .edicao-botoes button {
+  padding: 12px 16px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pagina-estante .edicao-botoes button[type='submit'] {
+  background: #603e2e;
+  color: #ffffff;
+}
+
+.pagina-estante .edicao-botoes button[type='button'] {
+  background: #e9ded2;
+  color: #3e2a20;
+}
+
+.pagina-estante .edicao-erro {
+  color: #a32c24;
+  font-size: 13px;
+}
+
+.pagina-estante .modal-remover {
+  width: 100%;
+  padding: 13px 18px;
+
+  background-color: #fff4f0;
+  color: #a33e32;
+
+  border: 1px solid #c78c82;
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pagina-estante .modal-remover:hover {
+  background-color: #f7e0d9;
+}
+
+.pagina-estante .modal-remover:focus-visible {
+  outline: 3px solid #a33e32;
+  outline-offset: 3px;
+}
+
+/*respeitar o hidden*/
+
+.pagina-estante .form-edicao[hidden],
+.pagina-estante .modal-acoes[hidden],
+.pagina-estante .edicao-erro[hidden] {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .pagina-estante .estante-modal {
+    padding: 20px;
+  }
+
+  .pagina-estante .edicao-paginas {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pagina-estante .estante-card {
+    transition: none;
+  }
+
+  .pagina-estante .estante-card:hover {
+    transform: none;
+  }
+}
+
+/* -------------------------------------
+        LPF - ADICIONAR LIVRO
+----------------------------------------*/
+
+/*conteúdo principal*/
+
+.pagina-adicionar .adicionar-main {
+  max-width: 1168px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+/*voltar para minha estante*/
+
+.pagina-adicionar .adicionar-voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 30px;
+
+  color: var(--cor-marrom);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.pagina-adicionar .adicionar-voltar:hover {
+  text-decoration: underline;
+}
+
+/*introdução*/
+
+.pagina-adicionar .adicionar-introducao {
+  margin-bottom: 32px;
+}
+
+.pagina-adicionar .adicionar-introducao h1 {
+  margin: 0 0 12px;
+
+  color: var(--cor-texto);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.pagina-adicionar .adicionar-introducao p {
+  margin: 0;
+
+  color: #836c5d;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/*form principal*/
+
+.pagina-adicionar .adicionar-formulario {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.5fr);
+  gap: 42px;
+
+  padding: 36px;
+
+  background-color: #fffaf2;
+  border: 1px solid var(--cor-borda);
+  border-radius: 24px;
+}
+
+/*titulos das colunas*/
+
+.pagina-adicionar .adicionar-formulario h2 {
+  margin: 0 0 25px;
+
+  color: var(--cor-texto);
+  font-size: 21px;
+  font-weight: 700;
+}
+
+/*coluna esquerda - capa do livro*/
+
+.pagina-adicionar .adicionar-coluna-capa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  min-width: 0;
+}
+
+.pagina-adicionar .adicionar-coluna-capa h2 {
+  align-self: center;
+  width: 100%;
+  text-align: center;
+}
+
+/*área de prévia*/
+
+.pagina-adicionar .adicionar-capa-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 290px;
+  min-height: 385px;
+  padding: 18px;
+
+  background-color: #f0e0cb;
+  border: 1px dashed #c7ab94;
+  border-radius: 18px;
+}
+
+/*capa padrão*/
+
+.pagina-adicionar .adicionar-capa-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  width: 100%;
+  min-height: 300px;
+
+  color: #806b5f;
+  text-align: center;
+}
+
+.pagina-adicionar .adicionar-capa-placeholder span {
+  font-size: 64px;
+  line-height: 1;
+}
+
+.pagina-adicionar .adicionar-capa-placeholder p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/*imagem selecionada*/
+
+.pagina-adicionar #previewCapa {
+  display: block;
+  width: 100%;
+  max-height: 345px;
+
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.pagina-adicionar #previewCapa[hidden],
+.pagina-adicionar #capaPlaceholder[hidden] {
+  display: none;
+}
+
+/*botão ESCOLHER IMAGEM*/
+
+.pagina-adicionar .adicionar-upload {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+  padding: 12px 24px;
+
+  background-color: #e8d8c1;
+  color: var(--cor-texto);
+  border: 1px solid #cdb49e;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pagina-adicionar .adicionar-upload:hover {
+  background-color: #dcc6aa;
+}
+
+/*input de arquivo*/
+
+.pagina-adicionar .adicionar-input-arquivo {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.pagina-adicionar
+  .adicionar-upload:has(+ .adicionar-input-arquivo:focus-visible) {
+  outline: 3px solid var(--cor-marrom);
+  outline-offset: 3px;
+}
+
+/*aviso da capa*/
+
+.pagina-adicionar .adicionar-capa-aviso {
+  max-width: 290px;
+  margin: 0;
+
+  color: #927d6e;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/*coluna direita - infos*/
+
+.pagina-adicionar .adicionar-coluna-campos {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  min-width: 0;
+}
+
+/*campos do form*/
+
+.pagina-adicionar .adicionar-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  min-width: 0;
+}
+
+.pagina-adicionar .adicionar-campo label {
+  color: var(--cor-texto);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pagina-adicionar .adicionar-campo input,
+.pagina-adicionar .adicionar-campo select,
+.pagina-adicionar .adicionar-campo textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 15px;
+
+  background-color: #fffdfa;
+  color: var(--cor-texto);
+
+  border: 1px solid #ccb29c;
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.pagina-adicionar .adicionar-campo input,
+.pagina-adicionar .adicionar-campo select {
+  min-height: 48px;
+}
+
+.pagina-adicionar .adicionar-campo textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/*placeholders*/
+
+.pagina-adicionar .adicionar-campo input::placeholder,
+.pagina-adicionar .adicionar-campo textarea::placeholder {
+  color: #9c897b;
+}
+
+/*foco nos campo*/
+
+.pagina-adicionar .adicionar-campo input:focus-visible,
+.pagina-adicionar .adicionar-campo select:focus-visible,
+.pagina-adicionar .adicionar-campo textarea:focus-visible {
+  outline: 2px solid var(--cor-marrom);
+  outline-offset: 2px;
+}
+
+/*duas coolunas de campo*/
+
+.pagina-adicionar .adicionar-linha-campos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/*texto de ajuda*/
+
+.pagina-adicionar .adicionar-ajuda {
+  margin: -8px 0 0;
+
+  color: #927d6e;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/*msg dos form*/
+
+.pagina-adicionar .adicionar-mensagem {
+  margin: 0;
+  padding: 12px 15px;
+
+  color: var(--cor-texto);
+  background-color: #f0e0cb;
+
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.pagina-adicionar .adicionar-mensagem[hidden] {
+  display: none;
+}
+
+/*botões do form*/
+
+.pagina-adicionar .adicionar-acoes {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+
+  margin-top: 12px;
+}
+
+.pagina-adicionar .adicionar-cancelar,
+.pagina-adicionar .adicionar-salvar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 12px 22px;
+
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/*cancelar*/
+
+.pagina-adicionar .adicionar-cancelar {
+  color: var(--cor-texto);
+  background-color: #eadccc;
+}
+
+.pagina-adicionar .adicionar-cancelar:hover {
+  background-color: #decab5;
+}
+
+/*add livro*/
+
+.pagina-adicionar .adicionar-salvar {
+  background-color: var(--cor-marrom);
+  color: #ffffff;
+  border: none;
+}
+
+.pagina-adicionar .adicionar-salvar:hover {
+  background-color: #764b37;
+}
+
+/*foco dos botões*/
+
+.pagina-adicionar .adicionar-cancelar:focus-visible,
+.pagina-adicionar .adicionar-salvar:focus-visible {
+  outline: 3px solid #bda38f;
+  outline-offset: 3px;
+}
+
+/*info de baixoo*/
+
+.pagina-adicionar .adicionar-observacao {
+  margin-top: 24px;
+  padding: 20px 26px;
+
+  background-color: #f0e0cb;
+  border-radius: 14px;
+}
+
+.pagina-adicionar .adicionar-observacao p {
+  margin: 0;
+
+  color: #6d5141;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.pagina-adicionar .adicionar-observacao strong {
+  color: var(--cor-texto);
+}
+
+/*prévia da leitura*/
+
+.pagina-adicionar .adicionar-preview-leitura {
+  width: 100%;
+  max-width: 290px;
+  margin-top: 20px;
+  padding: 20px;
+
+  background-color: #fffdfa;
+  border: 1px solid #bda38f;
+  border-radius: 16px;
+}
+
+/*titulo*/
+
+.pagina-adicionar .adicionar-preview-leitura h3 {
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+
+  color: #3e2a20;
+  font-size: 16px;
+  text-align: center;
+
+  border-bottom: 1px solid #e1ccba;
+}
+
+/*infos*/
+
+.pagina-adicionar .preview-linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.pagina-adicionar .preview-linha span {
+  color: #806b5f;
+  font-size: 13px;
+}
+
+.pagina-adicionar .preview-linha strong {
+  color: #603e2e;
+  font-size: 13px;
+  text-align: right;
+}
+
+/*progresso*/
+
+.pagina-adicionar .preview-progresso {
+  margin: 18px 0;
+}
+
+.pagina-adicionar .preview-barra {
+  width: 100%;
+  height: 9px;
+  overflow: hidden;
+
+  background-color: #e9ded2;
+  border-radius: 20px;
+}
+
+.pagina-adicionar .preview-barra-valor {
+  width: 0%;
+  height: 100%;
+
+  background-color: #603e2e;
+  border-radius: 20px;
+
+  transition: width 0.3s ease;
+}
+
+.pagina-adicionar #previewPaginas {
+  margin: 9px 0 0;
+  color: #927d6e;
+  font-size: 11px;
+  text-align: center;
+}
+
+/*stars*/
+
+.pagina-adicionar #previewEstrelas {
+  color: #a77b43;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+/*acessibilidade*/
+
+@media (prefers-reduced-motion: reduce) {
+  .pagina-adicionar .preview-barra-valor {
+    transition: none;
+  }
+}
+
+/*capa padrão - livros manuais*/
+.pagina-estante .estante-capa-padrao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 130px;
+  height: 185px;
+  max-width: 100%;
+
+  background-color: #603e2e;
+  color: #fffaf2;
+
+  border-radius: 8px;
+
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/*botão desativado durante o cadastro*/
+
+.pagina-adicionar .adicionar-salvar:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+/*responsividade ADICIONAR LIVRO*/
 
 @media (max-width: 900px) {
+  .pagina-adicionar .adicionar-formulario {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 
-    .pagina-apresentacao .apresentacao-card {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
+  .pagina-adicionar .adicionar-coluna-capa {
+    align-items: center;
+  }
 
-    .pagina-apresentacao .apresentacao-imagem {
-        max-width: 340px;
-        margin: 0 auto;
-    }
-
-    .pagina-apresentacao .apresentacao-dados h2 {
-        font-size: 34px;
-    }
+  .pagina-adicionar .adicionar-coluna-capa h2 {
+    text-align: center;
+  }
 }
 
 @media (max-width: 600px) {
+  .pagina-adicionar .adicionar-main {
+    padding: 30px 18px 55px;
+  }
 
-    .pagina-apresentacao .apresentacao-main {
-        padding: 30px 18px 55px;
-    }
+  .pagina-adicionar .adicionar-introducao h1 {
+    font-size: 30px;
+  }
 
-    .pagina-apresentacao .apresentacao-introducao h1 {
-        font-size: 30px;
-    }
+  .pagina-adicionar .adicionar-formulario {
+    padding: 20px;
+    border-radius: 18px;
+  }
 
-    .pagina-apresentacao .apresentacao-card {
-        padding: 20px;
-    }
+  .pagina-adicionar .adicionar-linha-campos {
+    grid-template-columns: 1fr;
+  }
 
-    .pagina-apresentacao .apresentacao-imagem img {
-        height: 340px;
-    }
+  .pagina-adicionar .adicionar-capa-preview {
+    min-height: 300px;
+  }
 
-    .pagina-apresentacao .apresentacao-detalhes {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
+  .pagina-adicionar .adicionar-acoes {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
 
-    .pagina-apresentacao .apresentacao-inferior {
-        grid-template-columns: 1fr;
-    }
+  .pagina-adicionar .adicionar-cancelar,
+  .pagina-adicionar .adicionar-salvar {
+    width: 100%;
+  }
 
-    .pagina-apresentacao .apresentacao-botao {
-        width: 100%;
-    }
-
-    .pagina-apresentacao .apresentacao-frase {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .pagina-adicionar .adicionar-observacao {
+    padding: 18px;
+  }
 }
 
-/*alinhamento do header e menu responsivo*/
+@media (prefers-reduced-motion: reduce) {
+  .pagina-adicionar .adicionar-upload,
+  .pagina-adicionar .adicionar-cancelar,
+  .pagina-adicionar .adicionar-salvar {
+    transition: none;
+  }
+}
+
+/*responsividade MINHA ESTANTE*/
+
+@media (max-width: 900px) {
+  .pagina-estante .estante-resumo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pagina-estante .estante-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .pagina-estante .estante-main {
+    padding: 35px 18px 60px;
+  }
+
+  .pagina-estante .estante-cabecalho {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pagina-estante .estante-cabecalho h1 {
+    font-size: 30px;
+  }
+
+  .pagina-estante .estante-adicionar {
+    width: 100%;
+  }
+
+  .pagina-estante .estante-resumo {
+    gap: 12px;
+  }
+
+  .pagina-estante .resumo-card {
+    padding: 18px;
+  }
+
+  .pagina-estante .resumo-card strong {
+    font-size: 27px;
+  }
+
+  .pagina-estante .estante-controles {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pagina-estante .estante-filtro {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pagina-estante .estante-filtro select {
+    width: 100%;
+  }
+
+  .pagina-estante .estante-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*respoonsividade APRESENTAÇÃO*/
+
+@media (max-width: 900px) {
+  .pagina-apresentacao .apresentacao-card {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .pagina-apresentacao .apresentacao-imagem {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .pagina-apresentacao .apresentacao-dados h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 600px) {
+  .pagina-apresentacao .apresentacao-main {
+    padding: 30px 18px 55px;
+  }
+
+  .pagina-apresentacao .apresentacao-introducao h1 {
+    font-size: 30px;
+  }
+
+  .pagina-apresentacao .apresentacao-card {
+    padding: 20px;
+  }
+
+  .pagina-apresentacao .apresentacao-imagem img {
+    height: 340px;
+  }
+
+  .pagina-apresentacao .apresentacao-detalhes {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .pagina-apresentacao .apresentacao-inferior {
+    grid-template-columns: 1fr;
+  }
+
+  .pagina-apresentacao .apresentacao-botao {
+    width: 100%;
+  }
+
+  .pagina-apresentacao .apresentacao-frase {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/*-------------------------------------------
+  ALINHAMENTO DO HEADER E MENU RESPONSIVO
+-------------------------------------------*/
 
 /*header computer*/
 
 .pagina-lpf .cabecalho-conteudo {
-    position: relative;
+  position: relative;
 }
 
 .pagina-lpf .menu {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 /*botão hamburgui escondido*/
 
 .pagina-lpf .menu-toggle {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 5px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
 
-    width: 42px;
-    height: 42px;
-    padding: 8px;
+  width: 42px;
+  height: 42px;
+  padding: 8px;
 
-    background: transparent;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .pagina-lpf .menu-toggle span {
-    display: block;
-    width: 24px;
-    height: 3px;
+  display: block;
+  width: 24px;
+  height: 3px;
 
-    background-color: #ffffff;
-    border-radius: 4px;
+  background-color: #ffffff;
+  border-radius: 4px;
 
-    transition: transform 0.2s ease,
-                opacity 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 /*header mob*/
 
 @media (max-width: 768px) {
+  .pagina-lpf .cabecalho-conteudo {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
 
-    .pagina-lpf .cabecalho-conteudo {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
+    min-height: 72px;
+    padding: 12px 16px;
+  }
 
-        min-height: 72px;
-        padding: 12px 16px;
-    }
+  /*logo na esquerda*/
 
-    /*logo na esquerda*/
+  .pagina-lpf .logo {
+    margin-right: auto;
+    font-size: 19px;
+  }
 
-    .pagina-lpf .logo {
-        margin-right: auto;
-        font-size: 19px;
-    }
+  .pagina-lpf .logo img {
+    width: 36px;
+    height: 36px;
+  }
 
-    .pagina-lpf .logo img {
-        width: 36px;
-        height: 36px;
-    }
+  /*mostrar o hamburgui*/
 
-    /*mostrar o hamburgui*/
+  .pagina-lpf .menu-toggle {
+    display: flex;
+    flex-shrink: 0;
+  }
 
-    .pagina-lpf .menu-toggle {
-        display: flex;
-        flex-shrink: 0;
-    }
+  .pagina-lpf .menu-toggle:hover {
+    background-color: #744c39;
+  }
 
-    .pagina-lpf .menu-toggle:hover {
-        background-color: #744c39;
-    }
+  .pagina-lpf .menu-toggle:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+  }
 
-    .pagina-lpf .menu-toggle:focus-visible {
-        outline: 2px solid #ffffff;
-        outline-offset: 3px;
-    }
+  /*menu recolhido*/
 
-    /*menu recolhido*/
+  .pagina-lpf .menu {
+    display: none;
+    position: absolute;
 
-    .pagina-lpf .menu {
-        display: none;
-        position: absolute;
+    top: 100%;
+    right: 16px;
+    z-index: 100;
 
-        top: 100%;
-        right: 16px;
-        z-index: 100;
+    width: min(300px, calc(100vw - 32px));
 
-        width: min(300px, calc(100vw - 32px));
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 2px;
 
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: stretch;
-        justify-content: flex-start;
-        gap: 2px;
+    margin: 0;
+    padding: 12px;
 
-        margin: 0;
-        padding: 12px;
+    background-color: #603e2e;
+    border: 1px solid #88614d;
+    border-radius: 12px;
 
-        background-color: #603e2e;
-        border: 1px solid #88614d;
-        border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  }
 
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-    }
+  /*menu aberto*/
 
-    /*menu aberto*/
+  .pagina-lpf .menu.aberto {
+    display: flex;
+  }
 
-    .pagina-lpf .menu.aberto {
-        display: flex;
-    }
+  .pagina-lpf .menu a {
+    display: block;
+    padding: 12px 14px;
 
-    .pagina-lpf .menu a {
-        display: block;
-        padding: 12px 14px;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 8px;
+  }
 
-        color: #ffffff;
-        font-size: 15px;
-        border-radius: 8px;
-    }
+  .pagina-lpf .menu a:hover {
+    background-color: #744c39;
+  }
 
-    .pagina-lpf .menu a:hover {
-        background-color: #744c39;
-    }
+  /*botão ENTRAR*/
 
-    /*botão ENTRAR*/
+  .pagina-lpf .perfil {
+    flex-shrink: 0;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
 
-    .pagina-lpf .perfil {
-        flex-shrink: 0;
-        padding: 10px 14px;
-        font-size: 13px;
-    }
+  /*animation do hamburgui*/
 
-    /*animation do hamburgui*/
+  .pagina-lpf .menu-toggle[aria-expanded='true'] span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
 
-    .pagina-lpf .menu-toggle[aria-expanded="true"]
-    span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
+  .pagina-lpf .menu-toggle[aria-expanded='true'] span:nth-child(2) {
+    opacity: 0;
+  }
 
-    .pagina-lpf .menu-toggle[aria-expanded="true"]
-    span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .pagina-lpf .menu-toggle[aria-expanded="true"]
-    span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
+  .pagina-lpf .menu-toggle[aria-expanded='true'] span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .pagina-lpf .menu-toggle span {
-        transition: none;
-    }
+  .pagina-lpf .menu-toggle span {
+    transition: none;
+  }
 }
