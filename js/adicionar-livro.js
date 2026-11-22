@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // MOSTRAR MENSAGENS DO FORMULÁRIO
   function mostrarMensagem(texto) {
+    mensagemCadastro.classList.remove('aviso-limite');
     mensagemCadastro.textContent = texto;
     mensagemCadastro.hidden = false;
   }
@@ -248,6 +249,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!resultado.sucesso) {
         mostrarMensagem(resultado.mensagem);
+
+        if (resultado.codigo === 'LIMITE_ATINGIDO') {
+          mensagemCadastro.classList.add('aviso-limite');
+
+          const linkEstante = document.createElement('a');
+          linkEstante.href = 'MinhaEstante.html';
+          linkEstante.textContent = 'Ir para Minha Estante';
+
+          mensagemCadastro.appendChild(linkEstante);
+        }
+
         return;
       }
 

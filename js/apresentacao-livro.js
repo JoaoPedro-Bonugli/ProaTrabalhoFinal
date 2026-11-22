@@ -89,6 +89,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!resultado.sucesso) {
         avisoEstante.textContent = resultado.mensagem;
+
+        if (resultado.codigo === 'LIMITE_ATINGIDO') {
+          avisoEstante.classList.add('aviso-limite');
+          avisoEstante.setAttribute('role', 'alert');
+
+          const linkEstante = document.createElement('a');
+          linkEstante.href = 'MinhaEstante.html';
+          linkEstante.textContent = 'Ir para Minha Estante';
+
+          avisoEstante.appendChild(linkEstante);
+        }
+
         return;
       }
 

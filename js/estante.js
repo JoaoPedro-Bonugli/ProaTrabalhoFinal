@@ -3,6 +3,21 @@
 window.LPF_ESTANTE = (() => {
   // IDENTIFICADOR DOS DADOS NO NAVEGADOR
   const CHAVE_STORAGE = 'lpf_estante_v1';
+  const LIMITE_LIVROS = 15;
+
+  function verificarLimite(livros) {
+    if (livros.length >= LIMITE_LIVROS) {
+      return {
+        sucesso: false,
+        codigo: 'LIMITE_ATINGIDO',
+        mensagem:
+          'Sua estante atingiu o limite de 15 livros. ' +
+          'Remova um livro da Minha Estante para adicionar outro.',
+      };
+    }
+
+    return null;
+  }
 
   // LER OS LIVROS SALVOS
   function lerEstante() {
@@ -98,6 +113,11 @@ window.LPF_ESTANTE = (() => {
         };
       }
 
+      const bloqueio = verificarLimite(estante);
+
+      if (bloqueio) {
+        return bloqueio;
+      }
       // CRIAR O REGISTRO DE LEITURA
       const novoLivro = {
         id: idLivro,
@@ -371,6 +391,11 @@ window.LPF_ESTANTE = (() => {
         };
       }
 
+      const bloqueio = verificarLimite(livros);
+
+      if (bloqueio) {
+        return bloqueio;
+      }
       // CRIAR IDENTIFICADOR EXCLUSIVO
       const id = `manual-${Date.now()}-${Math.random()
         .toString(36)

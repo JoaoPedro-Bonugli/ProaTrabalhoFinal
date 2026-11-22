@@ -1511,6 +1511,55 @@
   }
 }
 
+/*avisoo de limite de livros*/
+
+.pagina-apresentacao .apresentacao-aviso.aviso-limite,
+.pagina-adicionar .adicionar-mensagem.aviso-limite {
+  display: block;
+  margin-top: 14px;
+  padding: 18px 20px;
+
+  background-color: #f0e0cb;
+  color: var(--cor-texto);
+
+  border: 1px solid #d5bda7;
+  border-left: 4px solid var(--cor-marrom);
+  border-radius: 12px;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/*link minha estante*/
+
+.pagina-apresentacao .aviso-limite a,
+.pagina-adicionar .aviso-limite a {
+  display: block;
+  width: fit-content;
+  margin-top: 14px;
+  padding: 10px 16px;
+
+  background-color: var(--cor-marrom);
+  color: #ffffff;
+
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease;
+}
+
+.pagina-apresentacao .aviso-limite a:hover,
+.pagina-adicionar .aviso-limite a:hover {
+  background-color: #764b37;
+}
+
+.pagina-apresentacao .aviso-limite a:focus-visible,
+.pagina-adicionar .aviso-limite a:focus-visible {
+  outline: 3px solid #bda38f;
+  outline-offset: 3px;
+}
+
 /* -------------------------------------
         LPF - ADICIONAR LIVRO
 ----------------------------------------*/
