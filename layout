@@ -1,0 +1,87 @@
+<!--header-->
+<header class="cabecalho">
+  <div class="cabecalho-conteudo">
+    <a href="../index.html" class="logo">
+      <img
+        src="../assets/1_HOME_1/Logo.png"
+        alt="Logo dos Livros para o Futuro"
+      />
+      <span>L.P.F</span>
+    </a>
+    <!--botão MENU HAMBURGUER-->
+    <button
+      type="button"
+      class="menu-toggle"
+      id="botaoMenu"
+      aria-label="Abrir menu de navegação"
+      aria-controls="menuPrincipal"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!--nav principal-->
+    <nav class="menu" id="menuPrincipal" aria-label="Navegação principal">
+      <a href="../index.html">Início</a>
+
+      <a href="MinhaEstante.html" aria-current="page"> Minha Estante </a>
+
+      <a href="Descobrir.html"> Descobrir </a>
+
+      <a href="Comunidade.html"> Comunidade </a>
+
+      <a href="planosdefidelidade.html"> Planos </a>
+    </nav>
+
+    <a href="Entrar.html" class="perfil">Entrar</a>
+  </div>
+</header>
+
+<!--footer-->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="../assets/1_HOME_1/Logo.png" alt="" />
+
+        <strong>LPF - Livros para o Futuro</strong>
+      </div>
+
+      <div class="footer-social">
+        <img
+          src="../assets/1_HOME_1/redes.png"
+          alt="Facebook, YouTube e Instagram"
+        />
+      </div>
+    </div>
+
+    <div class="footer-info">
+      <div class="footer-column">
+        <h3>Contatos:</h3>
+        <p>WhatsApp: +55 1140228922</p>
+        <p>E-mail: LPF.LivrosparaoFuturo@gmail.com</p>
+        <p>SAC: 1140028922</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Central de ajuda para associados:</h3>
+        <p>Termos de serviço e política de privacidade</p>
+        <p>Políticas de cookies</p>
+        <p>Desde 2026 © LPF - Livros para o Futuro — CNPJ 45.740.175/0001-73</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Suporte:</h3>
+        <p>SAC: 1140028922</p>
+        <p>WhatsApp: +55 1140228922</p>
+        <p>E-mail: LPF.LivrosparaoFuturo@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 LPF - Livros para o Futuro</p>
+    </div>
+  </div>
+</footer>
