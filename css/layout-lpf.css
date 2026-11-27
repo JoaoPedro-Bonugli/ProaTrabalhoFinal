@@ -1,4 +1,14 @@
 /* CONFIGURAÇÕES GERAIS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:  'Segoe UI', Arial, sans-serif;
+}
+body {
+  background: #fdf3e7;
+  color: #333;
+}
 
 .pagina-lpf .cabecalho,
 .pagina-lpf .cabecalho * {
@@ -13,6 +23,7 @@
 
 .pagina-lpf .cabecalho {
   width: 100%;
+  margin: 0;
   background-color: #5d3a29;
 }
 

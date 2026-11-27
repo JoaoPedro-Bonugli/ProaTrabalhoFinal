@@ -1,0 +1,284 @@
+/* CONFIGURAÇÕES GERAIS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:  'Segoe UI', Arial, sans-serif;
+}
+body {
+  background: #fdf3e7;
+  color: #333;
+}
+.pagina-lpf .cabecalho,
+.pagina-lpf .cabecalho * {
+  box-sizing: border-box;
+}
+
+.pagina-lpf .cabecalho a {
+  text-decoration: none;
+}
+
+/* CABEÇALHO */
+
+.pagina-lpf .cabecalho {
+  width: 100%;
+  background-color: #5d3a29;
+}
+
+.pagina-lpf .cabecalho-conteudo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1200px;
+  min-height: 90px;
+  margin: 0 auto;
+  padding: 15px 12px 15px 24px;
+}
+
+/* LOGO */
+
+.pagina-lpf .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.pagina-lpf .logo img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+/* MENU DESKTOP */
+
+.pagina-lpf .menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  margin-left: auto;
+}
+
+.pagina-lpf .menu a {
+  display: inline-block;
+  padding: 8px 0;
+
+  color: #ffffff;
+  font-size: 15px;
+
+  border-bottom: 2px solid transparent;
+
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.pagina-lpf .menu a:hover,
+.pagina-lpf .menu a[aria-current='page'] {
+  border-bottom-color: #ffffff;
+}
+
+.pagina-lpf .menu a:hover {
+  transform: scale(1.1);
+}
+
+.pagina-lpf .menu a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* BOTÃO ENTRAR */
+
+.pagina-lpf .perfil {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  min-height: 45px;
+  padding: 10px 55px;
+  background-color: #fff7ed;
+  color: #5d3a29;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 60px;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pagina-lpf .perfil:hover {
+  transform: scale(1.08);
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.pagina-lpf .perfil:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* BOTÃO HAMBÚRGUER - ESCONDIDO NO DESKTOP */
+
+.pagina-lpf .menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+
+  width: 42px;
+  height: 42px;
+  padding: 8px;
+
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+/* TRÊS LINHAS DO HAMBÚRGUER */
+
+.pagina-lpf .menu-toggle span {
+  display: block;
+
+  width: 24px;
+  height: 3px;
+
+  background-color: #ffffff;
+  border-radius: 4px;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+/* ==========================================
+   RESPONSIVIDADE - CELULAR
+========================================== */
+
+@media (max-width: 768px) {
+  /* HEADER MOBILE */
+
+  .pagina-lpf .cabecalho-conteudo {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 12px 10px;
+  }
+
+  /* LOGO MOBILE */
+
+ .pagina-lpf .logo {
+  margin-right: 0;
+  font-size: 18px;
+  gap: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+  .pagina-lpf .logo img {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* EXIBIR BOTÃO HAMBÚRGUER */
+
+  .pagina-lpf .menu-toggle {
+   display: flex;
+  flex-shrink: 0;
+  margin-left: 4px;
+  }
+
+  .pagina-lpf .menu-toggle:hover {
+    background-color: #744c39;
+  }
+
+  .pagina-lpf .menu-toggle:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+  }
+
+  /* MENU FECHADO */
+
+  .pagina-lpf .menu {
+    display: none;
+    position: absolute;
+
+    top: 100%;
+    right: 16px;
+    z-index: 100;
+
+    width: min(300px, calc(100vw - 32px));
+
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 2px;
+
+    margin: 0;
+    padding: 12px;
+
+    background-color: #603e2e;
+    border: 1px solid #88614d;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  }
+
+  /* MENU ABERTO PELO JAVASCRIPT */
+
+  .pagina-lpf .menu.aberto {
+    display: flex;
+  }
+
+  /* LINKS DO MENU MOBILE */
+
+  .pagina-lpf .menu a {
+    display: block;
+    padding: 12px 14px;
+
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+
+  .pagina-lpf .menu a:hover {
+    background-color: #744c39;
+  }
+
+  /* BOTÃO ENTRAR MOBILE */
+
+ .pagina-lpf .perfil {
+  flex-shrink: 0;
+  min-width: 120px;
+  margin-left: auto;
+  padding: 10px 24px;
+  font-size: 13px;
+  }
+
+  /* ANIMAÇÃO DO HAMBÚRGUER VIRANDO X */
+
+  .pagina-lpf .menu-toggle[aria-expanded='true'] span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .pagina-lpf .menu-toggle[aria-expanded='true'] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .pagina-lpf .menu-toggle[aria-expanded='true'] span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+
+
+/*===============================================================*/
+/*daqui pra baixo seu conteúdo da main, corpo da página de login*/
