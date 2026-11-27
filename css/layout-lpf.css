@@ -18,16 +18,14 @@
 
 .pagina-lpf .cabecalho-conteudo {
   position: relative;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-
   max-width: 1200px;
   min-height: 90px;
   margin: 0 auto;
-  padding: 15px 24px;
+  padding: 15px 12px 15px 24px;
 }
 
 /* LOGO */
@@ -59,17 +57,24 @@
 }
 
 .pagina-lpf .menu a {
+  display: inline-block;
   padding: 8px 0;
 
   color: #ffffff;
   font-size: 15px;
 
   border-bottom: 2px solid transparent;
+
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .pagina-lpf .menu a:hover,
 .pagina-lpf .menu a[aria-current='page'] {
   border-bottom-color: #ffffff;
+}
+
+.pagina-lpf .menu a:hover {
+  transform: scale(1.1);
 }
 
 .pagina-lpf .menu a:focus-visible {
@@ -80,17 +85,25 @@
 /* BOTÃO ENTRAR */
 
 .pagina-lpf .perfil {
-  display: inline-block;
-
-  padding: 12px 28px;
-
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  min-height: 45px;
+  padding: 10px 55px;
   background-color: #fff7ed;
   color: #5d3a29;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 60px;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
 
-  border-radius: 6px;
-
-  font-size: 14px;
-  font-weight: 600;
+.pagina-lpf .perfil:hover {
+  transform: scale(1.08);
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .pagina-lpf .perfil:focus-visible {
@@ -139,7 +152,6 @@
 ========================================== */
 
 @media (max-width: 768px) {
-
   /* HEADER MOBILE */
 
   .pagina-lpf .cabecalho-conteudo {
@@ -147,18 +159,19 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
-
-    min-height: 72px;
-    padding: 12px 16px;
+    gap: 8px;
+    padding: 12px 10px;
   }
 
   /* LOGO MOBILE */
 
-  .pagina-lpf .logo {
-    margin-right: auto;
-    font-size: 19px;
-  }
+ .pagina-lpf .logo {
+  margin-right: 0;
+  font-size: 18px;
+  gap: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
 
   .pagina-lpf .logo img {
     width: 36px;
@@ -168,8 +181,9 @@
   /* EXIBIR BOTÃO HAMBÚRGUER */
 
   .pagina-lpf .menu-toggle {
-    display: flex;
-    flex-shrink: 0;
+   display: flex;
+  flex-shrink: 0;
+  margin-left: 4px;
   }
 
   .pagina-lpf .menu-toggle:hover {
@@ -232,29 +246,34 @@
 
   /* BOTÃO ENTRAR MOBILE */
 
-  .pagina-lpf .perfil {
-    flex-shrink: 0;
-    padding: 10px 14px;
-    font-size: 13px;
+ .pagina-lpf .perfil {
+  flex-shrink: 0;
+  min-width: 120px;
+  margin-left: auto;
+  padding: 10px 24px;
+  font-size: 13px;
   }
 
   /* ANIMAÇÃO DO HAMBÚRGUER VIRANDO X */
 
-  .pagina-lpf .menu-toggle[aria-expanded='true']
-  span:nth-child(1) {
+  .pagina-lpf .menu-toggle[aria-expanded='true'] span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
 
-  .pagina-lpf .menu-toggle[aria-expanded='true']
-  span:nth-child(2) {
+  .pagina-lpf .menu-toggle[aria-expanded='true'] span:nth-child(2) {
     opacity: 0;
   }
 
-  .pagina-lpf .menu-toggle[aria-expanded='true']
-  span:nth-child(3) {
+  .pagina-lpf .menu-toggle[aria-expanded='true'] span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
 }
+
+
+
+
+/*==========================================================================*/
+/*FOOTER*/
 
 /* CONFIGURAÇÕES GERAIS */
 

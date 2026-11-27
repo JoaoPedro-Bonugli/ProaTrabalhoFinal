@@ -54,3 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// MARCAR PÁGINA ATUAL NO MENU
+const linksMenu = document.querySelectorAll(".menu a");
+
+linksMenu.forEach(function(link) {
+  // Tira o marcado de todos
+  link.removeAttribute("aria-current");
+
+  // Se o link for igual a página que estou agora, marca ele
+  if (link.href === window.location.href) {
+    link.setAttribute("aria-current", "page");
+  }
+});
