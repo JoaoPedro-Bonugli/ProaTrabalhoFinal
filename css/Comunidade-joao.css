@@ -1,0 +1,417 @@
+/* Estilos exclusivos da página Comunidade */
+.pagina-comunidade {
+  --cor-comunidade-texto: #3e2a20;
+  --cor-comunidade-marrom: #5d3a29;
+  --cor-comunidade-card: #fffaf2;
+  --cor-comunidade-borda: #c9ad98;
+  --cor-comunidade-acao: #b99580;
+
+  min-height: 100vh;
+  background: linear-gradient(145deg, #d5c1ac 0%, #f5dfc9 62%, #efcfb5 100%);
+  color: var(--cor-comunidade-texto);
+}
+
+.pagina-comunidade .cabecalho {
+  position: relative;
+  z-index: 2;
+}
+
+.pagina-comunidade .cabecalho-conteudo {
+  min-height: 78px;
+}
+
+.pagina-comunidade .menu-toggle {
+  display: none;
+}
+
+.pagina-comunidade .perfil {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 128px;
+  min-height: 42px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  background: #fff7ed;
+  color: var(--cor-comunidade-marrom);
+  font-weight: 600;
+}
+
+.pagina-comunidade .comunidade-main {
+  max-width: 1168px;
+  padding: 54px 24px 80px;
+}
+
+.pagina-comunidade .comunidade-introducao {
+  margin-bottom: 30px;
+}
+
+.pagina-comunidade .comunidade-introducao h1 {
+  margin: 0 0 4px;
+  color: var(--cor-comunidade-texto);
+  font-size: clamp(30px, 4vw, 40px);
+  line-height: 1.2;
+}
+
+.pagina-comunidade .comunidade-introducao p {
+  max-width: 530px;
+  margin: 0;
+  color: #201914;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.pagina-comunidade .comunidade-grade {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(260px, 0.9fr);
+  align-items: start;
+  gap: 28px;
+}
+
+.pagina-comunidade .comunidade-atividades,
+.pagina-comunidade .comunidade-paineis {
+  display: grid;
+  align-content: start;
+  gap: 24px;
+}
+
+.pagina-comunidade .atividade-card,
+.pagina-comunidade .painel-comunidade {
+  overflow: hidden;
+  border: 1px solid var(--cor-comunidade-borda);
+  border-radius: 16px;
+  background: var(--cor-comunidade-card);
+  box-shadow: 0 3px 12px rgba(62, 42, 32, 0.05);
+}
+
+.pagina-comunidade .atividade-titulo,
+.pagina-comunidade .painel-titulo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 48px;
+  margin: 0;
+  padding: 12px 18px;
+  background: #fbf3e8;
+  color: var(--cor-comunidade-texto);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.pagina-comunidade .atividade-conteudo {
+  padding: 14px 18px 16px;
+}
+
+.pagina-comunidade .leitor-identidade {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.pagina-comunidade .leitor-avatar {
+  display: inline-flex;
+  flex: 0 0 30px;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--cor-comunidade-marrom);
+  color: #fffaf2;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.pagina-comunidade .leitor-identidade h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.pagina-comunidade .atividade-tempo {
+  margin: 1px 0 0;
+  color: #79675b;
+  font-size: 12px;
+}
+
+.pagina-comunidade .avaliacao-livro {
+  padding-left: 40px;
+}
+
+.pagina-comunidade .avaliacao-livro h4 {
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+
+.pagina-comunidade .avaliacao-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  color: #78675c;
+  font-size: 12px;
+}
+
+.pagina-comunidade .estrelas {
+  color: var(--cor-comunidade-marrom);
+  letter-spacing: 1px;
+}
+
+.pagina-comunidade .avaliacao-texto {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.pagina-comunidade .atividade-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 16px 0 0 40px;
+}
+
+.pagina-comunidade .atividade-acoes button {
+  min-width: 96px;
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--cor-comunidade-acao);
+  color: #2f211a;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.pagina-comunidade .atividade-acoes button:hover {
+  transform: translateY(-1px);
+  background: #a77e68;
+}
+
+.pagina-comunidade .atividade-acoes button:focus-visible,
+.pagina-comunidade .perfil:focus-visible,
+.pagina-comunidade .menu a:focus-visible,
+.pagina-comunidade .menu-toggle:focus-visible {
+  outline: 3px solid #8a5c43;
+  outline-offset: 3px;
+}
+
+.pagina-comunidade .painel-titulo {
+  min-height: 52px;
+}
+
+.pagina-comunidade .lista-leitores,
+.pagina-comunidade .lista-comentados {
+  margin: 0;
+  padding: 15px 18px 18px;
+  list-style: none;
+}
+
+.pagina-comunidade .lista-leitores {
+  display: grid;
+  gap: 12px;
+}
+
+.pagina-comunidade .lista-leitores li {
+  display: grid;
+  grid-template-columns: 16px 30px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  font-size: 14px;
+}
+
+.pagina-comunidade .posicao-leitor,
+.pagina-comunidade .total-livros {
+  font-size: 12px;
+}
+
+.pagina-comunidade .lista-leitores .leitor-avatar {
+  width: 28px;
+  height: 28px;
+  flex-basis: 28px;
+}
+
+.pagina-comunidade .lista-comentados {
+  display: grid;
+  gap: 14px;
+}
+
+.pagina-comunidade .lista-comentados li {
+  display: grid;
+  gap: 3px;
+}
+
+.pagina-comunidade .lista-comentados strong {
+  font-size: 14px;
+}
+
+.pagina-comunidade .lista-comentados span {
+  color: #78675c;
+  font-size: 12px;
+}
+
+.pagina-comunidade .footer {
+  border-radius: 40px 40px 0 0;
+}
+
+@media (max-width: 768px) {
+  .pagina-comunidade .cabecalho-conteudo {
+    position: relative;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 12px 16px;
+  }
+
+  .pagina-comunidade .logo {
+    gap: 8px;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .pagina-comunidade .logo img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .pagina-comunidade .menu-toggle {
+    display: flex;
+    flex: 0 0 42px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .pagina-comunidade .menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    border-radius: 4px;
+    background: #fff;
+  }
+
+  .pagina-comunidade .menu {
+    display: none;
+    position: absolute;
+    top: calc(100% - 6px);
+    right: 12px;
+    z-index: 5;
+    width: min(300px, calc(100vw - 24px));
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    margin: 0;
+    padding: 12px;
+    border: 1px solid #88614d;
+    border-radius: 12px;
+    background: #603e2e;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  }
+
+  .pagina-comunidade .menu.aberto {
+    display: flex;
+  }
+
+  .pagina-comunidade .menu a {
+    padding: 12px 14px;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+  }
+
+  .pagina-comunidade .menu a:hover {
+    background: #744c39;
+  }
+
+  .pagina-comunidade .perfil {
+    min-width: 90px;
+    min-height: 38px;
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .pagina-comunidade .comunidade-main {
+    padding: 38px 20px 60px;
+  }
+
+  .pagina-comunidade .comunidade-grade {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .pagina-comunidade .comunidade-paineis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .pagina-comunidade .cabecalho-conteudo {
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .pagina-comunidade .logo {
+    gap: 5px;
+    font-size: 16px;
+  }
+
+  .pagina-comunidade .logo img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .pagina-comunidade .menu-toggle {
+    flex-basis: 36px;
+    width: 36px;
+    height: 38px;
+    padding: 6px;
+  }
+
+  .pagina-comunidade .perfil {
+    min-width: 72px;
+    min-height: 34px;
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+  .pagina-comunidade .comunidade-main {
+    padding: 32px 16px 48px;
+  }
+
+  .pagina-comunidade .comunidade-introducao p {
+    font-size: 15px;
+  }
+
+  .pagina-comunidade .comunidade-paineis {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pagina-comunidade .atividade-conteudo {
+    padding: 12px;
+  }
+
+  .pagina-comunidade .avaliacao-livro {
+    padding-left: 0;
+  }
+
+  .pagina-comunidade .atividade-acoes {
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pagina-comunidade .atividade-acoes button {
+    transition: none;
+  }
+}
