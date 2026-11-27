@@ -2312,18 +2312,20 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
-
+    gap: 8px;
     min-height: 72px;
-    padding: 12px 16px;
+    padding: 12px 10px;
   }
 
   /*logo na esquerda*/
 
   .pagina-lpf .logo {
-    margin-right: auto;
-    font-size: 19px;
-  }
+  margin-right: 0;
+  font-size: 18px;
+  gap: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
 
   .pagina-lpf .logo img {
     width: 36px;
@@ -2332,10 +2334,11 @@
 
   /*mostrar o hamburgui*/
 
-  .pagina-lpf .menu-toggle {
-    display: flex;
-    flex-shrink: 0;
-  }
+ .pagina-lpf .menu-toggle {
+  display: flex;
+  flex-shrink: 0;
+  margin-left: 4px;
+}
 
   .pagina-lpf .menu-toggle:hover {
     background-color: #744c39;
@@ -2395,11 +2398,13 @@
 
   /*botão ENTRAR*/
 
-  .pagina-lpf .perfil {
-    flex-shrink: 0;
-    padding: 10px 14px;
-    font-size: 13px;
-  }
+ .pagina-lpf .perfil {
+  flex-shrink: 0;
+  min-width: 120px;
+  margin-left: auto;
+  padding: 10px 24px;
+  font-size: 13px;
+}
 
   /*animation do hamburgui*/
 
